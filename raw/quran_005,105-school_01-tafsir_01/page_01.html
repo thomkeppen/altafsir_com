@@ -1,0 +1,1776 @@
+
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=windows-1256">
+<meta NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link REL="stylesheet" TYPE="text/css" HREF="TafsirCSSV3.CSS">
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/scripts.js" type="text/javascript"></script>
+<script src="AltafsirLibrary/core.js" type="text/javascript"></script>
+<title>Altafsir.com - The Tafsirs - التفاسير</title>
+
+<INPUT type="hidden" id="LangID" name="LangID" value="1">
+
+
+
+<SCRIPT LANGUAGE=javascript>
+	function Tafsir_Notes(NoteNo) {
+		var topw = (window.screen.height/2)-225
+		var leftw = (window.screen.width/2)-350
+			window.open('TafasirNotes.asp?TafsirID='+document.getElementById("Tafsir").value+'&SoraNo='+document.getElementById("SoraName").value+'&NoteNo='+NoteNo,'Hadith','height=450,width=685,top='+ topw +',left='+ leftw +',scrollbars=yes,status=no,toolbar=no,menubar=no,location=no');
+	}
+	
+	function OpenWindow(HadithNo) {
+		var topw = (window.screen.availHeight/2)-275
+		var leftw = (window.screen.availWidth/2)-350
+			window.open('HadithDetails.asp?HadithNo='+HadithNo,'Hadith','height=550,width=685,top='+ topw +',left='+ leftw +',scrollbars=yes,status=no,toolbar=no,menubar=no,location=no');
+	}
+	
+	var ArraySoraAyah = new Array();
+	var ArrayMadhab = new Array();
+	var ArrayMadhabId = new Array();
+	var ArrayTafsirId = new Array();
+	var ArrayTafsirName = new Array();
+	var ArrayTableName = new Array();
+	var ArrayLang = new Array();
+	var ArrayDateOfDeath=new Array();
+	
+ArraySoraAyah[1]='7';ArraySoraAyah[2]='286';ArraySoraAyah[3]='200';ArraySoraAyah[4]='176';ArraySoraAyah[5]='120';ArraySoraAyah[6]='165';ArraySoraAyah[7]='206';ArraySoraAyah[8]='75';ArraySoraAyah[9]='129';ArraySoraAyah[10]='109';ArraySoraAyah[11]='123';ArraySoraAyah[12]='111';ArraySoraAyah[13]='43';ArraySoraAyah[14]='52';ArraySoraAyah[15]='99';ArraySoraAyah[16]='128';ArraySoraAyah[17]='111';ArraySoraAyah[18]='110';ArraySoraAyah[19]='98';ArraySoraAyah[20]='135';ArraySoraAyah[21]='112';ArraySoraAyah[22]='78';ArraySoraAyah[23]='118';ArraySoraAyah[24]='64';ArraySoraAyah[25]='77';ArraySoraAyah[26]='227';ArraySoraAyah[27]='93';ArraySoraAyah[28]='88';ArraySoraAyah[29]='69';ArraySoraAyah[30]='60';ArraySoraAyah[31]='34';ArraySoraAyah[32]='30';ArraySoraAyah[33]='73';ArraySoraAyah[34]='54';ArraySoraAyah[35]='45';ArraySoraAyah[36]='83';ArraySoraAyah[37]='182';ArraySoraAyah[38]='88';ArraySoraAyah[39]='75';ArraySoraAyah[40]='85';ArraySoraAyah[41]='54';ArraySoraAyah[42]='53';ArraySoraAyah[43]='89';ArraySoraAyah[44]='59';ArraySoraAyah[45]='37';ArraySoraAyah[46]='35';ArraySoraAyah[47]='38';ArraySoraAyah[48]='29';ArraySoraAyah[49]='18';ArraySoraAyah[50]='45';ArraySoraAyah[51]='60';ArraySoraAyah[52]='49';ArraySoraAyah[53]='62';ArraySoraAyah[54]='55';ArraySoraAyah[55]='78';ArraySoraAyah[56]='96';ArraySoraAyah[57]='29';ArraySoraAyah[58]='22';ArraySoraAyah[59]='24';ArraySoraAyah[60]='13';ArraySoraAyah[61]='14';ArraySoraAyah[62]='11';ArraySoraAyah[63]='11';ArraySoraAyah[64]='18';ArraySoraAyah[65]='12';ArraySoraAyah[66]='12';ArraySoraAyah[67]='30';ArraySoraAyah[68]='52';ArraySoraAyah[69]='52';ArraySoraAyah[70]='44';ArraySoraAyah[71]='28';ArraySoraAyah[72]='28';ArraySoraAyah[73]='20';ArraySoraAyah[74]='56';ArraySoraAyah[75]='40';ArraySoraAyah[76]='31';ArraySoraAyah[77]='50';ArraySoraAyah[78]='40';ArraySoraAyah[79]='46';ArraySoraAyah[80]='42';ArraySoraAyah[81]='29';ArraySoraAyah[82]='19';ArraySoraAyah[83]='36';ArraySoraAyah[84]='25';ArraySoraAyah[85]='22';ArraySoraAyah[86]='17';ArraySoraAyah[87]='19';ArraySoraAyah[88]='26';ArraySoraAyah[89]='30';ArraySoraAyah[90]='20';ArraySoraAyah[91]='15';ArraySoraAyah[92]='21';ArraySoraAyah[93]='11';ArraySoraAyah[94]='8';ArraySoraAyah[95]='8';ArraySoraAyah[96]='19';ArraySoraAyah[97]='5';ArraySoraAyah[98]='8';ArraySoraAyah[99]='8';ArraySoraAyah[100]='11';ArraySoraAyah[101]='11';ArraySoraAyah[102]='8';ArraySoraAyah[103]='3';ArraySoraAyah[104]='9';ArraySoraAyah[105]='5';ArraySoraAyah[106]='4';ArraySoraAyah[107]='7';ArraySoraAyah[108]='3';ArraySoraAyah[109]='6';ArraySoraAyah[110]='3';ArraySoraAyah[111]='5';ArraySoraAyah[112]='4';ArraySoraAyah[113]='5';ArraySoraAyah[114]='6';ArrayMadhab[0]='1';
+ArrayMadhab[1]='10';
+ArrayMadhab[2]='35';
+ArrayMadhab[3]='12';
+ArrayMadhab[4]='7';
+ArrayMadhab[5]='4';
+ArrayMadhab[6]='3';
+ArrayMadhab[7]='6';
+ArrayMadhab[8]='2';
+ArrayMadhab[9]='7';
+ArrayMadhab[10]='2';
+ArrayMadhabId[0]='0';
+ArrayTafsirId[0]='0';
+ArrayTafsirName[0]='غير محدد';
+ArrayTableName[0]='000';
+ArrayLang[0]='1';
+ArrayDateOfDeath[0]='';
+ArrayMadhabId[1]='1';
+ArrayTafsirId[1]='1';
+ArrayTafsirName[1]='جامع البيان في تفسير القرآن/ الطبري';
+ArrayTableName[1]='Al_Tabari';
+ArrayLang[1]='1';
+ArrayDateOfDeath[1]='(ت 310 هـ)';
+ArrayMadhabId[2]='1';
+ArrayTafsirId[2]='2';
+ArrayTafsirName[2]='الكشاف/ الزمخشري';
+ArrayTableName[2]='Al_Kashaf';
+ArrayLang[2]='1';
+ArrayDateOfDeath[2]='(ت 538 هـ)';
+ArrayMadhabId[3]='4';
+ArrayTafsirId[3]='3';
+ArrayTafsirName[3]='مجمع البيان في تفسير القرآن/ الطبرسي';
+ArrayTableName[3]='Al_Tabrasi';
+ArrayLang[3]='1';
+ArrayDateOfDeath[3]='(ت 548 هـ)';
+ArrayMadhabId[4]='1';
+ArrayTafsirId[4]='4';
+ArrayTafsirName[4]='مفاتيح الغيب ، التفسير الكبير/ الرازي';
+ArrayTableName[4]='Al_Razi';
+ArrayLang[4]='1';
+ArrayDateOfDeath[4]='(ت 606 هـ)';
+ArrayMadhabId[5]='1';
+ArrayTafsirId[5]='5';
+ArrayTafsirName[5]='الجامع لاحكام القرآن/ القرطبي';
+ArrayTableName[5]='Al_Qurtobi';
+ArrayLang[5]='1';
+ArrayDateOfDeath[5]='(ت 671 هـ)';
+ArrayMadhabId[6]='1';
+ArrayTafsirId[6]='7';
+ArrayTafsirName[6]='تفسير القرآن الكريم/ ابن كثير';
+ArrayTableName[6]='Ibn_Kathir';
+ArrayLang[6]='1';
+ArrayDateOfDeath[6]='(ت 774 هـ)';
+ArrayMadhabId[7]='1';
+ArrayTafsirId[7]='6';
+ArrayTafsirName[7]='انوار التنزيل واسرار التأويل/ البيضاوي';
+ArrayTableName[7]='Al_Baydawi';
+ArrayLang[7]='1';
+ArrayDateOfDeath[7]='(ت 685 هـ)';
+ArrayMadhabId[8]='1';
+ArrayTafsirId[8]='74';
+ArrayTafsirName[8]='Tafsir al-Jalalayn';
+ArrayTableName[8]='Al_Jalalain_Eng';
+ArrayLang[8]='2';
+ArrayDateOfDeath[8]='';
+ArrayMadhabId[9]='1';
+ArrayTafsirId[9]='8';
+ArrayTafsirName[9]='تفسير الجلالين/ المحلي و السيوطي';
+ArrayTableName[9]='Al_Jalalain';
+ArrayLang[9]='1';
+ArrayDateOfDeath[9]='(ت المحلي 864 هـ)';
+ArrayMadhabId[10]='1';
+ArrayTafsirId[10]='9';
+ArrayTafsirName[10]='فتح القدير/ الشوكاني';
+ArrayTableName[10]='Al_Shoukani';
+ArrayLang[10]='1';
+ArrayDateOfDeath[10]='(ت 1250 هـ)';
+ArrayMadhabId[11]='2';
+ArrayTafsirId[11]='10';
+ArrayTafsirName[11]='تفسير القرآن/ الفيروز آبادي ';
+ArrayTableName[11]='Ibn_Abbass';
+ArrayLang[11]='1';
+ArrayDateOfDeath[11]='(ت817 هـ)';
+ArrayMadhabId[12]='2';
+ArrayTafsirId[12]='73';
+ArrayTafsirName[12]='Tanwîr al-Miqbâs min Tafsîr Ibn ‘Abbâs';
+ArrayTableName[12]='Ibn_Abbass_Eng';
+ArrayLang[12]='2';
+ArrayDateOfDeath[12]='';
+ArrayMadhabId[13]='2';
+ArrayTafsirId[13]='11';
+ArrayTafsirName[13]='بحر العلوم/ السمرقندي';
+ArrayTableName[13]='Al_Samarkandi';
+ArrayLang[13]='1';
+ArrayDateOfDeath[13]='(ت 375 هـ)';
+ArrayMadhabId[14]='2';
+ArrayTafsirId[14]='12';
+ArrayTafsirName[14]='النكت والعيون/ الماوردي';
+ArrayTableName[14]='Al_Nokatt_Wa_Al_Oyoun';
+ArrayLang[14]='1';
+ArrayDateOfDeath[14]='(ت 450 هـ)';
+ArrayMadhabId[15]='2';
+ArrayTafsirId[15]='13';
+ArrayTafsirName[15]='معالم التنزيل/ البغوي';
+ArrayTableName[15]='Al_Bagawi';
+ArrayLang[15]='1';
+ArrayDateOfDeath[15]='(ت 516 هـ)';
+ArrayMadhabId[16]='2';
+ArrayTafsirId[16]='14';
+ArrayTafsirName[16]='المحرر الوجيز في تفسير الكتاب العزيز/ ابن عطية';
+ArrayTableName[16]='Ibn_Atiyah';
+ArrayLang[16]='1';
+ArrayDateOfDeath[16]='(ت 546 هـ)';
+ArrayMadhabId[17]='2';
+ArrayTafsirId[17]='15';
+ArrayTafsirName[17]='زاد المسير في علم التفسير/ ابن الجوزي';
+ArrayTableName[17]='Zad_Almasir';
+ArrayLang[17]='1';
+ArrayDateOfDeath[17]='(ت 597 هـ)';
+ArrayMadhabId[18]='2';
+ArrayTafsirId[18]='16';
+ArrayTafsirName[18]='تفسير القرآن/ ابن عبد السلام';
+ArrayTableName[18]='Ibn_Abd_El_Salam';
+ArrayLang[18]='1';
+ArrayDateOfDeath[18]='(ت 660 هـ)';
+ArrayMadhabId[19]='2';
+ArrayTafsirId[19]='17';
+ArrayTafsirName[19]='مدارك التنزيل وحقائق التأويل/ النسفي';
+ArrayTableName[19]='Al_Nasafi';
+ArrayLang[19]='1';
+ArrayDateOfDeath[19]='(ت 710 هـ)';
+ArrayMadhabId[20]='2';
+ArrayTafsirId[20]='18';
+ArrayTafsirName[20]='لباب التأويل في معاني التنزيل/ الخازن';
+ArrayTableName[20]='Al_Khazen';
+ArrayLang[20]='1';
+ArrayDateOfDeath[20]='(ت 725 هـ)';
+ArrayMadhabId[21]='2';
+ArrayTafsirId[21]='19';
+ArrayTafsirName[21]='البحر المحيط/ ابو حيان';
+ArrayTableName[21]='Al_Bahr_Al_Mouheet';
+ArrayLang[21]='1';
+ArrayDateOfDeath[21]='(ت 754 هـ)';
+ArrayMadhabId[22]='2';
+ArrayTafsirId[22]='20';
+ArrayTafsirName[22]='التفسير/ ابن عرفة';
+ArrayTableName[22]='Ibn_Arafa';
+ArrayLang[22]='1';
+ArrayDateOfDeath[22]='(ت 803 هـ)';
+ArrayMadhabId[23]='2';
+ArrayTafsirId[23]='22';
+ArrayTafsirName[23]='غرائب القرآن و رغائب الفرقان/القمي النيسابوري';
+ArrayTableName[23]='ALQumeeAlNesabouri';
+ArrayLang[23]='1';
+ArrayDateOfDeath[23]='(ت 728 هـ)';
+ArrayMadhabId[24]='2';
+ArrayTafsirId[24]='23';
+ArrayTafsirName[24]='الجواهر الحسان في تفسير القرآن/ الثعالبي';
+ArrayTableName[24]='Al_Thaalibi';
+ArrayLang[24]='1';
+ArrayDateOfDeath[24]='(ت 875 هـ)';
+ArrayMadhabId[25]='2';
+ArrayTafsirId[25]='24';
+ArrayTafsirName[25]='اللباب في علوم الكتاب/ ابن عادل';
+ArrayTableName[25]='Al_Lubab';
+ArrayLang[25]='1';
+ArrayDateOfDeath[25]='(ت 880 هـ)';
+ArrayMadhabId[26]='2';
+ArrayTafsirId[26]='25';
+ArrayTafsirName[26]='نظم الدرر في تناسب الآيات والسور/ البقاعي';
+ArrayTableName[26]='Al_Biqaee';
+ArrayLang[26]='1';
+ArrayDateOfDeath[26]='(ت 885 هـ)';
+ArrayMadhabId[27]='2';
+ArrayTafsirId[27]='26';
+ArrayTafsirName[27]='الدر المنثور في التفسير بالمأثور/ السيوطي';
+ArrayTableName[27]='AlSuitee';
+ArrayLang[27]='1';
+ArrayDateOfDeath[27]='(ت 911 هـ)';
+ArrayMadhabId[28]='2';
+ArrayTafsirId[28]='28';
+ArrayTafsirName[28]='إرشاد العقل السليم إلى مزايا الكتاب الكريم/ ابو السعود';
+ArrayTableName[28]='Abu_AlSoud';
+ArrayLang[28]='1';
+ArrayDateOfDeath[28]='(ت 951 هـ)';
+ArrayMadhabId[29]='2';
+ArrayTafsirId[29]='67';
+ArrayTafsirName[29]='مقاتل بن سليمان/ مقاتل بن سليمان';
+ArrayTableName[29]='Al_Mokatel';
+ArrayLang[29]='1';
+ArrayDateOfDeath[29]='(ت 150 هـ)';
+ArrayMadhabId[30]='2';
+ArrayTafsirId[30]='75';
+ArrayTafsirName[30]='الكشف والبيان / الثعلبي';
+ArrayTableName[30]='Al_Thaalabi';
+ArrayLang[30]='1';
+ArrayDateOfDeath[30]='(ت 427 هـ)';
+ArrayMadhabId[31]='3';
+ArrayTafsirId[31]='29';
+ArrayTafsirName[31]='تفسير القرآن/ التستري';
+ArrayTableName[31]='Al_Tusturi';
+ArrayLang[31]='1';
+ArrayDateOfDeath[31]='(ت 283 هـ)';
+ArrayMadhabId[32]='3';
+ArrayTafsirId[32]='30';
+ArrayTafsirName[32]='حقائق التفسير/ السلمي';
+ArrayTableName[32]='Haqaeq_Al_Tafsir';
+ArrayLang[32]='1';
+ArrayDateOfDeath[32]='(ت 412 هـ)';
+ArrayMadhabId[33]='3';
+ArrayTafsirId[33]='31';
+ArrayTafsirName[33]='لطائف الإشارات / القشيري';
+ArrayTableName[33]='ALQushairee';
+ArrayLang[33]='1';
+ArrayDateOfDeath[33]='(ت 465 هـ)';
+ArrayMadhabId[34]='3';
+ArrayTafsirId[34]='32';
+ArrayTafsirName[34]='عرائس البيان في حقائق القرآن/ البقلي';
+ArrayTableName[34]='Araess_AlBayan';
+ArrayLang[34]='1';
+ArrayDateOfDeath[34]='(ت 606 هـ)';
+ArrayMadhabId[35]='3';
+ArrayTafsirId[35]='33';
+ArrayTafsirName[35]='تفسير القرآن / ابن عربي';
+ArrayTableName[35]='Ibn_Arabi';
+ArrayLang[35]='1';
+ArrayDateOfDeath[35]='(ت 638 هـ)';
+ArrayMadhabId[36]='3';
+ArrayTafsirId[36]='36';
+ArrayTafsirName[36]='روح البيان في تفسير القرآن/ اسماعيل حقي';
+ArrayTableName[36]='Rooh_Al_Bayan';
+ArrayLang[36]='1';
+ArrayDateOfDeath[36]='(ت 1127 هـ)';
+ArrayMadhabId[37]='3';
+ArrayTafsirId[37]='37';
+ArrayTafsirName[37]='البحر المديد في تفسير القرآن المجيد/ ابن عجيبة';
+ArrayTableName[37]='Ibn_Ajiba';
+ArrayLang[37]='1';
+ArrayDateOfDeath[37]='(ت 1224 هـ)';
+ArrayMadhabId[38]='4';
+ArrayTafsirId[38]='38';
+ArrayTafsirName[38]='تفسير القرآن/ علي بن ابراهيم القمي';
+ArrayTableName[38]='Al_Qummi';
+ArrayLang[38]='1';
+ArrayDateOfDeath[38]='(ت القرن 4 هـ)';
+ArrayMadhabId[39]='4';
+ArrayTafsirId[39]='39';
+ArrayTafsirName[39]='التبيان الجامع لعلوم القرآن/ الطوسي';
+ArrayTableName[39]='AlTebyan';
+ArrayLang[39]='1';
+ArrayDateOfDeath[39]='(ت 460 هـ)';
+ArrayMadhabId[40]='4';
+ArrayTafsirId[40]='56';
+ArrayTafsirName[40]='الميزان في تفسير القرآن/ الطبطبائي';
+ArrayTableName[40]='Al_Tabtabaee';
+ArrayLang[40]='1';
+ArrayDateOfDeath[40]='(ت 1401 هـ)';
+ArrayMadhabId[41]='4';
+ArrayTafsirId[41]='41';
+ArrayTafsirName[41]='الصافي في تفسير كلام الله الوافي/ الفيض الكاشاني';
+ArrayTableName[41]='Al_Safee';
+ArrayLang[41]='1';
+ArrayDateOfDeath[41]='(ت 1090 هـ)';
+ArrayMadhabId[42]='4';
+ArrayTafsirId[42]='42';
+ArrayTafsirName[42]='تفسير بيان السعادة في مقامات العبادة/ الجنابذي';
+ArrayTableName[42]='Al_Janabizi';
+ArrayLang[42]='1';
+ArrayDateOfDeath[42]='(ت القرن 14  هـ)';
+ArrayMadhabId[43]='5';
+ArrayTafsirId[43]='44';
+ArrayTafsirName[43]='تفسير الحبري/ الحبري';
+ArrayTableName[43]='Al_Hubari';
+ArrayLang[43]='1';
+ArrayDateOfDeath[43]='(ت 286 هـ)';
+ArrayMadhabId[44]='5';
+ArrayTafsirId[44]='45';
+ArrayTafsirName[44]='تفسير فرات الكوفي/ فرات الكوفي';
+ArrayTableName[44]='FuratAl_Kufee';
+ArrayLang[44]='1';
+ArrayDateOfDeath[44]='(ت القرن 3 هـ)';
+ArrayMadhabId[45]='5';
+ArrayTafsirId[45]='47';
+ArrayTafsirName[45]='تفسير الأعقم/ الأعقم';
+ArrayTableName[45]='Al_Aaqam';
+ArrayLang[45]='1';
+ArrayDateOfDeath[45]='(ت القرن 9 هـ)';
+ArrayMadhabId[46]='6';
+ArrayTafsirId[46]='48';
+ArrayTafsirName[46]='تفسير كتاب الله العزيز/ الهواري';
+ArrayTableName[46]='Al_Hawaree';
+ArrayLang[46]='1';
+ArrayDateOfDeath[46]='(ت القرن 3 هـ)';
+ArrayMadhabId[47]='6';
+ArrayTafsirId[47]='49';
+ArrayTafsirName[47]='هميان الزاد إلى دار المعاد / اطفيش';
+ArrayTableName[47]='Heyman_ALZad';
+ArrayLang[47]='1';
+ArrayDateOfDeath[47]='(ت 1332 هـ)';
+ArrayMadhabId[48]='9';
+ArrayTafsirId[48]='50';
+ArrayTafsirName[48]='تيسير التفسير/ اطفيش';
+ArrayTableName[48]='Tayseer_Al_Tafseer';
+ArrayLang[48]='1';
+ArrayDateOfDeath[48]='(ت 1332 هـ)';
+ArrayMadhabId[49]='6';
+ArrayTafsirId[49]='51';
+ArrayTafsirName[49]='جواهر التفسير/ الخليلي';
+ArrayTableName[49]='Jawaher_Al_Tasfir';
+ArrayLang[49]='1';
+ArrayDateOfDeath[49]=' (مـ 1942م- )';
+ArrayMadhabId[50]='7';
+ArrayTafsirId[50]='52';
+ArrayTafsirName[50]='روح المعاني/ الالوسي';
+ArrayTableName[50]='Al_Alousi';
+ArrayLang[50]='1';
+ArrayDateOfDeath[50]='(ت 1270 هـ)';
+ArrayMadhabId[51]='7';
+ArrayTafsirId[51]='53';
+ArrayTafsirName[51]='في ظلال القرآن/ سيد قطب';
+ArrayTableName[51]='Al_Zelal';
+ArrayLang[51]='8';
+ArrayDateOfDeath[51]='(ت 1387 هـ)';
+ArrayMadhabId[52]='7';
+ArrayTafsirId[52]='54';
+ArrayTafsirName[52]='التحرير والتنوير/ ابن عاشور';
+ArrayTableName[52]='Al_TahreerWaAlTanweer';
+ArrayLang[52]='1';
+ArrayDateOfDeath[52]='(ت 1393 هـ)';
+ArrayMadhabId[53]='7';
+ArrayTafsirId[53]='55';
+ArrayTafsirName[53]='أضواء البيان في تفسير القرآن/ الشنقيطي';
+ArrayTableName[53]='Adwaa_AlBayan';
+ArrayLang[53]='1';
+ArrayDateOfDeath[53]='(ت 1393 هـ)';
+ArrayMadhabId[54]='4';
+ArrayTafsirId[54]='40';
+ArrayTafsirName[54]='تفسير صدر المتألهين/ صدر المتألهين الشيرازي ';
+ArrayTableName[54]='Al_Sherazzi';
+ArrayLang[54]='1';
+ArrayDateOfDeath[54]='(ت 1059 هـ)';
+ArrayMadhabId[55]='7';
+ArrayTafsirId[55]='76';
+ArrayTafsirName[55]='خواطر محمد متولي الشعراوي';
+ArrayTableName[55]='Al_Shaarawi';
+ArrayLang[55]='1';
+ArrayDateOfDeath[55]='(ت 1418 هـ)';
+ArrayMadhabId[56]='7';
+ArrayTafsirId[56]='57';
+ArrayTafsirName[56]='الوسيط في تفسير القرآن الكريم/ طنطاوي';
+ArrayTableName[56]='Tantawi';
+ArrayLang[56]='1';
+ArrayDateOfDeath[56]='(ت 1431 هـ)';
+ArrayMadhabId[57]='9';
+ArrayTafsirId[57]='68';
+ArrayTafsirName[57]='تيسير التفسير/ القطان';
+ArrayTableName[57]='Tayseer_Altafsir_AlQattan';
+ArrayLang[57]='1';
+ArrayDateOfDeath[57]=' (ت 1404 هـ)';
+ArrayMadhabId[58]='8';
+ArrayTafsirId[58]='60';
+ArrayTafsirName[58]='الوجيز/ الواحدي';
+ArrayTableName[58]='Al_Wajeez';
+ArrayLang[58]='1';
+ArrayDateOfDeath[58]='(ت 468 هـ)';
+ArrayMadhabId[59]='9';
+ArrayTafsirId[59]='65';
+ArrayTafsirName[59]='المنتخب في تفسير القرآن الكريم / لجنة القرآن و السنة';
+ArrayTableName[59]='Al_Muntakhab';
+ArrayLang[59]='1';
+ArrayDateOfDeath[59]='';
+ArrayMadhabId[60]='10';
+ArrayTafsirId[60]='66';
+ArrayTafsirName[60]='أيسر التفاسير/ أبو بكر الجزائري';
+ArrayTableName[60]='Aysar_AlTafsir';
+ArrayLang[60]='1';
+ArrayDateOfDeath[60]=' (مـ1921م- )';
+ArrayMadhabId[61]='9';
+ArrayTafsirId[61]='71';
+ArrayTafsirName[61]='أيسر التفاسير/ د. أسعد حومد';
+ArrayTableName[61]='Aysar_Al_Tafasir';
+ArrayLang[61]='1';
+ArrayDateOfDeath[61]='(ت 2011م)';
+ArrayMadhabId[62]='2';
+ArrayTafsirId[62]='78';
+ArrayTafsirName[62]='تفسير مجاهد / مجاهد بن جبر المخزومي';
+ArrayTableName[62]='Mojahed';
+ArrayLang[62]='1';
+ArrayDateOfDeath[62]='(ت 104 هـ)';
+ArrayMadhabId[63]='2';
+ArrayTafsirId[63]='79';
+ArrayTafsirName[63]='الدر المصون/السمين الحلبي';
+ArrayTableName[63]='Al_Dur_Al_Masoun';
+ArrayLang[63]='1';
+ArrayDateOfDeath[63]='(ت 756 هـ)';
+ArrayMadhabId[64]='2';
+ArrayTafsirId[64]='88';
+ArrayTafsirName[64]='التسهيل لعلوم التنزيل / ابن جزي الغرناطي';
+ArrayTableName[64]='AL_Ghernate';
+ArrayLang[64]='1';
+ArrayDateOfDeath[64]='(ت 741 هـ)';
+ArrayMadhabId[65]='9';
+ArrayTafsirId[65]='85';
+ArrayTafsirName[65]='  تفسير آيات الأحكام/ الصابوني';
+ArrayTableName[65]='Ayat_AlAhkam';
+ArrayLang[65]='1';
+ArrayDateOfDeath[65]='(مـ 1930م -) ';
+ArrayMadhabId[66]='9';
+ArrayTafsirId[66]='84';
+ArrayTafsirName[66]='مختصر تفسير ابن كثير/ الصابوني';
+ArrayTableName[66]='Mukhtasar_Ibn_Kathir';
+ArrayLang[66]='1';
+ArrayDateOfDeath[66]='(مـ 1930م -) ';
+ArrayMadhabId[67]='9';
+ArrayTafsirId[67]='83';
+ArrayTafsirName[67]=' صفوة التفاسير/ الصابوني';
+ArrayTableName[67]='Al_Sabone';
+ArrayLang[67]='1';
+ArrayDateOfDeath[67]='(مـ 1930م -) ';
+ArrayMadhabId[68]='1';
+ArrayTafsirId[68]='86';
+ArrayTafsirName[68]='Asbab Al-Nuzul by Al-Wahidi';
+ArrayTableName[68]='Al_Wahidi';
+ArrayLang[68]='2';
+ArrayDateOfDeath[68]='';
+ArrayMadhabId[69]='5';
+ArrayTafsirId[69]='89';
+ArrayTafsirName[69]=' غريب القرآن / زيد بن علي';
+ArrayTableName[69]='GhareebQuran_ZaidAli';
+ArrayLang[69]='1';
+ArrayDateOfDeath[69]='(ت 120 هـ)';
+ArrayMadhabId[70]='8';
+ArrayTafsirId[70]='90';
+ArrayTafsirName[70]='النهر الماد / الأندلسي';
+ArrayTableName[70]='Al_Nahr_Al_Mad';
+ArrayLang[70]='1';
+ArrayDateOfDeath[70]='(ت 754 هـ)';
+ArrayMadhabId[71]='2';
+ArrayTafsirId[71]='91';
+ArrayTafsirName[71]='التفسير الكبير / للإمام الطبراني';
+ArrayTableName[71]='Al_Tabarani';
+ArrayLang[71]='1';
+ArrayDateOfDeath[71]='(ت 360 هـ)';
+ArrayMadhabId[72]='3';
+ArrayTafsirId[72]='92';
+ArrayTafsirName[72]='تفسير الهدايه إلى بلوغ النهايه/ مكي بن أبي طالب ';
+ArrayTableName[72]='Makki';
+ArrayLang[72]='1';
+ArrayDateOfDeath[72]='(ت 437 هـ)';
+ArrayMadhabId[73]='3';
+ArrayTafsirId[73]='93';
+ArrayTafsirName[73]='Tafsir al-Tustari';
+ArrayTableName[73]='Al_Tustari_Eng';
+ArrayLang[73]='2';
+ArrayDateOfDeath[73]='';
+ArrayMadhabId[74]='2';
+ArrayTafsirId[74]='94';
+ArrayTafsirName[74]='تأويلات أهل السنة/ الماتريدي ';
+ArrayTableName[74]='Al_Matridi';
+ArrayLang[74]='1';
+ArrayDateOfDeath[74]='(ت 333هـ)';
+ArrayMadhabId[75]='3';
+ArrayTafsirId[75]='95';
+ArrayTafsirName[75]='تفسير الجيلاني/ الجيلاني';
+ArrayTableName[75]='Al_Jeelany';
+ArrayLang[75]='1';
+ArrayDateOfDeath[75]='(ت713هـ)';
+ArrayMadhabId[76]='2';
+ArrayTafsirId[76]='96';
+ArrayTafsirName[76]='حاشية الصاوي / تفسير الجلالين ';
+ArrayTableName[76]='Al_Jalalain_Al_Sawi_Margin';
+ArrayLang[76]='1';
+ArrayDateOfDeath[76]='(ت1241هـ)';
+ArrayMadhabId[77]='3';
+ArrayTafsirId[77]='97';
+ArrayTafsirName[77]='التأويلات النجمية في التفسير الإشاري الصوفي/ الإمام أحمد بن عمر ';
+ArrayTableName[77]='Ahmad_Ben_Omar';
+ArrayLang[77]='1';
+ArrayDateOfDeath[77]='(ت618 هـ)';
+ArrayMadhabId[78]='10';
+ArrayTafsirId[78]='98';
+ArrayTafsirName[78]='تفسير تيسير الكريم الرحمن في تفسير كلام المنان/ عبد الرحمن بن ناصر بن السعدي';
+ArrayTableName[78]='Al_Saadi';
+ArrayLang[78]='1';
+ArrayDateOfDeath[78]='(ت 1376هـ)';
+ArrayMadhabId[79]='2';
+ArrayTafsirId[79]='99';
+ArrayTafsirName[79]='تفسير سفيان الثوري/ عبد الله سفيان بن سعيد بن مسروق الثوري الكوفي';
+ArrayTableName[79]='Al_Koofi';
+ArrayLang[79]='1';
+ArrayDateOfDeath[79]='(ت161هـ)';
+ArrayMadhabId[80]='2';
+ArrayTafsirId[80]='100';
+ArrayTafsirName[80]='تفسير النسائي/ النسائي';
+ArrayTableName[80]='Al_Nesaae';
+ArrayLang[80]='1';
+ArrayDateOfDeath[80]='(ت 303 هـ)';
+ArrayMadhabId[81]='2';
+ArrayTafsirId[81]='101';
+ArrayTafsirName[81]='تفسير عبد الرزاق الصنعاني مصور /همام الصنعاني';
+ArrayTableName[81]='Al_Sanaani';
+ArrayLang[81]='1';
+ArrayDateOfDeath[81]='(ت 211 هـ) ';
+ArrayMadhabId[82]='2';
+ArrayTafsirId[82]='102';
+ArrayTafsirName[82]='محاسن التأويل / محمد جمال الدين القاسمي';
+ArrayTableName[82]='Al_Qasemi';
+ArrayLang[82]='1';
+ArrayDateOfDeath[82]='(ت 1332هـ)';
+ArrayMadhabId[83]='2';
+ArrayTafsirId[83]='103';
+ArrayTafsirName[83]='تفسير المنار / محمد رشيد بن علي رضا';
+ArrayTableName[83]='MohammadRedha';
+ArrayLang[83]='1';
+ArrayDateOfDeath[83]='(ت 1354هـ)';
+ArrayMadhabId[84]='2';
+ArrayTafsirId[84]='104';
+ArrayTafsirName[84]='تفسير القرآن العزيز/ ابن أبي زمنين';
+ArrayTableName[84]='Ibn_Abi_Zamneen';
+ArrayLang[84]='1';
+ArrayDateOfDeath[84]='(ت  399هـ)';
+ArrayMadhabId[85]='2';
+ArrayTafsirId[85]='105';
+ArrayTafsirName[85]='كتاب نزهة القلوب/ أبى بكر السجستاني ';
+ArrayTableName[85]='Al_Sajestani';
+ArrayLang[85]='1';
+ArrayDateOfDeath[85]='(ت 330هـ)';
+ArrayMadhabId[86]='';
+ArrayTafsirId[86]='106';
+ArrayTafsirName[86]='تذكرة الاريب في تفسير الغريب/ الامام ابي الفرج ابن الجوزي';
+ArrayTableName[86]='Al_Areeb';
+ArrayLang[86]='1';
+ArrayDateOfDeath[86]='(ت 597 هـ)';
+ArrayMadhabId[87]='2';
+ArrayTafsirId[87]='107';
+ArrayTafsirName[87]='Kashani Tafsir ';
+ArrayTableName[87]='Al_Kashani_Eng';
+ArrayLang[87]='2';
+ArrayDateOfDeath[87]='';
+ArrayMadhabId[88]='3';
+ArrayTafsirId[88]='108';
+ArrayTafsirName[88]='Al Qushairi Tafsir';
+ArrayTableName[88]='Al_Qushairi_Eng';
+ArrayLang[88]='2';
+ArrayDateOfDeath[88]='';
+ArrayMadhabId[89]='2';
+ArrayTafsirId[89]='109';
+ArrayTafsirName[89]='Kashf Al-Asrar Tafsir';
+ArrayTableName[89]='Kashf_AlAsrar_Eng';
+ArrayLang[89]='2';
+ArrayDateOfDeath[89]='';
+ArrayMadhabId[90]='';
+ArrayTafsirId[90]='110';
+ArrayTafsirName[90]='البرهان في تفسير القرآن/ هاشم الحسيني البحراني';
+ArrayTableName[90]='Al_Bahrani';
+ArrayLang[90]='1';
+ArrayDateOfDeath[90]='(ت 1107هـ)';
+ArrayMadhabId[91]='';
+ArrayTafsirId[91]='111';
+ArrayTafsirName[91]='رموز الكنوز في تفسير الكتاب العزيز/ عز الدين عبد الرازق الرسعني الحنبلي';
+ArrayTableName[91]='Al_Rasani';
+ArrayLang[91]='1';
+ArrayDateOfDeath[91]='(ت 661هـ)';
+
+</script>
+<Script Language=JScript>
+ function PrevAyah()
+ {
+
+	fbPrevAyah();
+ }
+ 
+ function NextAyah()
+ {
+	fbNextAyah();
+ }
+//The function for Tafsir next Aya parameters
+function fbNextAyah(){
+var Sora = Dom.getElm('SoraName');
+	var Ayah = Dom.getElm('Ayat');
+	var MadhabNameSub = Dom.getElm('Madhab');
+	var TafsirNameSub = Dom.getElm('Tafsir'); 
+	var LangID = document.getElementById("LangID").value;
+
+
+   //  alert(document.getElementById('SoraAyatTotal').value);
+
+		
+	SoraAyatTotal = parseInt(document.getElementById('SoraAyatTotal').value);
+
+   
+
+
+	if(MadhabNameSub.value == 0 && TafsirNameSub.value == 0)
+	{
+		
+		alert("الرجاء اختيار تفسير لكي يتم عرضه حسب خياراتك من السورة و الآية");
+		
+		Dom.getElm("Tafsir").focus();
+	}
+	else
+	{
+		if ( parseInt(Ayah.value) < SoraAyatTotal){
+			AyahNo = parseInt(Ayah.value) + 1;
+			
+			document.HiddenForm.tSoraNo.value = Sora.value;
+			document.HiddenForm.tAyahNo.value = AyahNo;
+			document.HiddenForm.tMadhNo.value = MadhabNameSub.value;
+			document.HiddenForm.tTafsirNo.value = TafsirNameSub.value;
+			document.HiddenForm.tDisplay.value = "yes";
+			document.HiddenForm.UserProfile.value = 0;
+			//document.HiddenForm.submit();
+				document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub.value +"&tTafsirNo="+ TafsirNameSub.value +"&tSoraNo="+ Sora.value +"&tAyahNo="+ AyahNo +"&tDisplay=yes&UserProfile=0&LanguageId=" + LangID
+		}
+		else
+		{
+			AyahNo = 1
+			SoraName = parseInt(Sora.value);
+			SoraName = SoraName + 1
+			if (SoraName < 115)
+			{
+				document.HiddenForm.tSoraNo.value = SoraName;
+				document.HiddenForm.tAyahNo.value = AyahNo;
+				document.HiddenForm.tMadhNo.value = MadhabNameSub.value;
+				document.HiddenForm.tTafsirNo.value = TafsirNameSub.value;
+				document.HiddenForm.tDisplay.value = "yes";
+				document.HiddenForm.UserProfile.value = 0;
+				//document.HiddenForm.submit(); 
+					document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub.value +"&tTafsirNo="+ TafsirNameSub.value +"&tSoraNo="+ SoraName +"&tAyahNo="+ AyahNo +"&tDisplay=yes&UserProfile=0&LanguageId=" + LangID
+			}
+			else
+			{
+				document.HiddenForm.tSoraNo.value = 1;
+				document.HiddenForm.tAyahNo.value = AyahNo;
+				document.HiddenForm.tMadhNo.value = MadhabNameSub.value;
+				document.HiddenForm.tTafsirNo.value = TafsirNameSub.value;
+				document.HiddenForm.tDisplay.value = "yes";
+				document.HiddenForm.UserProfile.value = 0;
+				//document.HiddenForm.submit();
+					document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub.value +"&tTafsirNo="+ TafsirNameSub.value +"&tSoraNo=1&tAyahNo="+ AyahNo +"&tDisplay=yes&UserProfile=0&LanguageId=" + LangID
+			}
+		}
+	}
+}
+//Tafsir Previous Aya
+function fbPrevAyah(){
+	var Sora = Dom.getElm('SoraName');
+	var Ayah = Dom.getElm('Ayat');
+	var MadhabNameSub = Dom.getElm('Madhab');
+	var TafsirNameSub = Dom.getElm('Tafsir'); 
+	var LangID = document.getElementById("LangID").value;
+		
+	if(MadhabNameSub.value == 0 && TafsirNameSub.value == 0)
+	{
+		
+		alert("الرجاء اختيار تفسير لكي يتم عرضه حسب خياراتك من السورة و الآية");
+		
+		Dom.getElm("Tafsir").focus();
+	}
+	else
+	{	
+		if (Ayah.value > 1)
+			{
+				AyahNo = parseInt(Ayah.value) - 1;
+				Sora = Sora.value;
+			}
+		else
+			{ 
+				var TempArral;
+				var Sora;
+				
+				TempArral = document.Form1.TotalAyahNo5.value; 
+				Sora = Sora.value - 1
+				
+				AyahNo =  TempArral; 
+								
+				if (Sora < 1)
+					{
+						Sora = 114
+						AyahNo = 6
+					}
+			}	
+		document.HiddenForm.tSoraNo.value = Sora;
+		document.HiddenForm.tAyahNo.value = AyahNo;
+		document.HiddenForm.tMadhNo.value = MadhabNameSub.value;
+		document.HiddenForm.tTafsirNo.value = TafsirNameSub.value;
+		document.HiddenForm.tDisplay.value = "yes";
+		document.HiddenForm.UserProfile.value = 0;
+		//document.HiddenForm.submit();
+			document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub.value +"&tTafsirNo="+ TafsirNameSub.value +"&tSoraNo="+ Sora +"&tAyahNo="+ AyahNo +"&tDisplay=yes&UserProfile=0&LanguageId=" + LangID
+	}
+}
+</Script>
+<SCRIPT LANGUAGE=javascript>
+//calling Functions
+ function dSoraName_onchange(x)
+ {
+	SoraName_onchange(x)
+ }
+ 
+ function Ayat_onchange()
+ {
+	fbAyat_onchange()
+ }
+ 
+ function Madhab_onchange(y)
+ {
+	fbMadhab_onchange(y)
+ }
+ 
+ function Tafsir_onchange()
+ {
+	fbTafsir_onchange()
+ }
+ 
+ function Display_onclick()
+ {
+	fbDisplay_onclick()
+ }
+ 
+ function ReadAyah_onclick()
+ {
+	fbReadAyah_onclick()
+ }
+
+ function InnerLink_onchange(Tafsir,Count,PageSize)
+ {
+	fbInnerLink_onchange(Tafsir,Count,PageSize);
+ }
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript>
+var get_Pageid = "altafasir1";
+
+function next_onmouseover() {
+	Dom.getElm('next').style.cursor ="hand"; 
+}
+
+function prev_onmouseover() {
+	Dom.getElm('prev').style.cursor="hand";  
+}
+	
+function menuit1_onmouseover(){
+	Dom.getElm('ReadAyah').style.cursor="hand";
+}
+
+function menuit2_onmouseover(){
+	Dom.getElm('OpenQurPage').style.cursor="hand";
+}
+
+function menuit3_onmouseover(){
+	Dom.getElm('getQurPage').style.cursor="hand";
+}
+
+function menu_OnMouseOver(){
+	Dom.getElm('AyahMenu').style.display ="";
+}
+
+function menu_OnMouseOut(){
+	Dom.getElm('AyahMenu').style.display ="none";
+}
+
+function Display_onmouseover() 
+{
+	Dom.getElm('Display').style.cursor = "hand";
+}
+
+
+function ChangeIcon(object){
+	object.style.cursor = "hand";
+}
+
+function Open_QurPage(Sora,Ayah){ 
+	Dom.getElm('AyahMenu').style.display = "none";
+
+	var pagelink ="Quran.asp?SoraNo=" + Sora + "&Ayah=" + Ayah + "&NewPage=0&LanguageID=" + 1
+	//var w_height = window.screen.availHeight/1.5;
+	//var w_width = window.screen.availWidth/1.5;		
+		//window.open(pagelink, null, "height=" + w_height + ",width=" + w_width + ",status=yes, resizable=Yes, toolbar=yes, menubar=yes, location=yes, top=0, left=0, scrollbars=yes")
+	window.open(pagelink, null, "status=yes, resizable=Yes, toolbar=yes, menubar=yes, location=yes, top=0, left=0, scrollbars=yes")
+}
+
+function go_QurPage(Sora,Ayah){
+	document.location.href = "Quran.asp?SoraNo=" + Sora + "&Ayah=" + Ayah + "&NewPage=0&LanguageID=" + 1
+}
+
+var doc_Y ,doc_X
+function document_onclick() 
+{
+	doc_Y = event.clientY;
+	doc_X = event.clientX;
+}
+
+function Open_Menu()
+{
+	
+	Dom.getElm('AyahMenu').style.left    = doc_X - parseInt(Dom.getElm('AyahMenu').style.width) - 5;
+	if (parseInt(Dom.getElm('AyahMenu').style.left) < 0)
+	{
+		Dom.getElm('AyahMenu').style.left = 0
+	}
+	
+	Dom.getElm('AyahMenu').style.top     = doc_Y;// - parseInt(Dom.getElm('AyahMenu').style.height) - 80 + document.body.scrollTop;
+	Dom.getElm('AyahMenu').style.display = "";
+}
+
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=next EVENT=onmouseover>
+ next_onmouseover()
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=prev EVENT=onmouseover>
+ prev_onmouseover()
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=document EVENT=onclick>
+ document_onclick()
+</SCRIPT>
+
+<style type="text/css">
+#menu {
+position: absolute;
+}
+</style>
+<SCRIPT LANGUAGE="javascript">
+var CSS_menuLeft = '10px'; 
+var CSS_menuTop = '20px'; 
+
+function getScrollLeft() {
+	return document.body && typeof document.body.scrollLeft != 'undefined' ?
+	document.body.scrollLeft :
+	window.pageXOffset ? pageXOffset : null;
+}
+
+function getScrollTop() {
+	return document.body && typeof document.body.scrollTop != 'undefined' ?
+	document.body.scrollTop :
+	window.pageYOffset ? pageYOffset : null;
+}
+
+function menu_fixit(id) {
+	if (typeof menu_fixit.timer == 'undefined') menu_fixit.timer = null;
+	if (menu_fixit.timer) clearTimeout(menu_fixit.timer);
+	menu_fixit.el = document.getElementById ? document.getElementById(id) :
+	document.all ? document.all(id) : null;
+	if (menu_fixit.el && menu_fixit.el.style) {
+	menu_fixit.el.style.visibility = 'hidden';
+	menu_fixit.el.style.left = parseInt(CSS_menuLeft) + getScrollLeft();
+	menu_fixit.el.style.top = parseInt(CSS_menuTop) + getScrollTop();
+	menu_fixit.timer = setTimeout('menu_fixit.el.style.visibility="visible"', 50);
+}
+}
+
+onscroll = function() { menu_fixit('MenuScroll'); };
+onload = function() { menu_fixit('MenuScroll'); };
+</SCRIPT>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18824147-1']);
+  _gaq.push(['_setDomainName', '.altafsir.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+
+
+<input name="TafsirID" id="TafsirID" value="1" type="hidden">
+<div class="container">
+
+<!--Right Menu begining: HEIGHT: 865px; -->
+<div id="Arabic" class="MainMenu MainMenuAr InnerMainMenu">
+	<div class="logo" style="height: 90px; margin: 0 auto; width: 67px;">	<a href="javascript:document.location.href='indexArabic.asp'"><IMG height="93" src="images/approvedSide1Arabic256.GIF" width="66" border="0"></a>	</div>
+	
+<ul class="TopMenu">
+	<li><a id="quran1" href="Quran.asp?SoraNo=1&Ayah=1&NewPage=1&LanguageID=1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+											  القرآن والتجويد 
+ </a></li>
+    <li><a  id="altafasir1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="Tafasir.asp?tMadhNo=0&tTafsirNo=0&tSoraNo=1&tAyahNo=1&tDisplay=no&LanguageID=1" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+						التفاسير </a></li>
+    <li><a id="Qeraat1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="Recitations.asp?LanguageID=1&img=A" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+						علم القراءات </a></li>
+    <li><a id="quranscience2" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="AsbabAlnuzol.asp?SoraName=1&Ayah=0&img=A&LanguageID=1" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+						علوم 	القرآن </a></li>
+    <li><a id="MiscBooks2" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="MiscellaneousBooks.asp?LanguageID=1" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+						كتب متفرقة </a></li>
+    <li><a id="translations1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="Languages.asp?LanguageID=1" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+						تراجم </a></li>
+    <li><a id="search1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="Quran_Search.asp?LanguageID=1" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+							بحث وفهارس&nbsp;&nbsp; </a></li>
+    <li><a id="registration1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="RegForm.asp?LanguageID=1" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">
+						تسجيل </a></li>
+    <li>
+      
+      <a style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' id='LoginArabic' href='Login.asp?LanguageID=1' onmouseover='return OnMouseOver(this.id)' OnMouseOut ='return OnMouseOut(this.id)'> دخول</a>
+      
+    </li>
+    <li><a  id="forum1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="Discussion_Forums/ForumLogin.asp?LanguageID=1" onmouseover='return OnMouseOver(this.id)' OnMouseOut ='return OnMouseOut(this.id)'>
+						حوار </a></li>
+    <li><a  id="Testimonies1" style='FONT-FAMILY: Arial; font-weight:bold' class='arMenuLink' href="Testimonies.asp?LanguageID=1" onmouseover='return OnMouseOver(this.id)' OnMouseOut ='return OnMouseOut(this.id)'>
+						إشادات </a></li>
+    <li><a id="RareRecitations" href="recitationsOdd.asp?languageid=1&img=C" style="FONT-FAMILY: Arial; font-weight:bold" class="arMenuLink" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)"> 
+                 قراءات نادرة 
+            </a></li>
+    <li><a id="similarVerses" href="AyatMutashabehat.asp?languageid=1&img=B" style="FONT-FAMILY: Arial; font-weight:bold" class="arMenuLink" onmouseover="return OnMouseOver(this.id)" OnMouseOut ="return OnMouseOut(this.id)">الآيات المتشابهات</a></li>
+</ul>
+    <!--<table align="left" border="0" cellPadding="0" cellSpacing="0" style="HEIGHT: 422px; WIDTH: 117px" width="75%" background="">
+			<tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+			
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr><tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr>
+
+			
+			
+			<tr>
+				<td height="8" >
+					 
+				</td>
+			</tr>
+			<tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td height="8"><p>
+					<img align="absMiddle" alt="" height="17" src="images/Diamond.gif" width="17">
+					
+					</p>
+				</td>
+			</tr>
+		
+			
+			
+			
+			         <tr> 
+        <td height="8"><p>
+			<img align="absMiddle" alt ="" height="17" src="images/Diamond.gif" width="17"> 
+			</p></td>
+      </tr>
+            <tr> 
+        <td height="8"><p>
+			<img align="absMiddle" alt ="" height="17" src="images/Diamond.gif" width="17"> 
+			
+			</p></td>
+      </tr>
+					</table>-->
+	
+	
+<script type="text/javascript">  
+function showHubTooltip()
+{
+	document.getElementById("HubToolTip").innerHTML = "";
+	document.getElementById("HubToolTip").style.display = "block";
+	document.getElementById("HubToolTip").style.zIndex = '100';
+	document.getElementById("HubToolTip").style.position = 'absolute';
+
+}
+
+function HideHubTooltip()
+{
+	document.getElementById("HubToolTip").style.display = "none";
+}
+</script>
+
+<div class="AdArea"> <a href="http://www.greattafsirs.com" target="_blank"> <IMG border=0 height=97 width=80 src="images/GreatTafsirs.png" ></a> </div>
+<ul class="BottomMenu BottomMenuArabic">
+  <div id="HubToolTip"> </div>
+  <li class="newStar"><a  href ="LoveInQuranIntro.asp"> الحب في القرآن الكريم</a></li>
+  <li><a href ="Books/DailyWird2010.pdf" target="_blank" > ورد القرآن اليومي</a></li>
+  <li><a href ="QuranOnMobile.asp?LanguageId=1" > القرآن الكريم على الموبايل</a></li>
+  <li><a href="El-MuftiCV.asp" >اسأل المفتي</a></li>
+  <li><a href="El-MufasserCV.asp" >اسأل المفسر</a></li>
+  <li><a href="Books/Al_Jazreyah.pdf" target="_blank"  > الجزرية</a></li>
+  <li><a href="Books/Tuhfat_AlAtfal.pdf" target="_blank"  > تحفة الأطفال</a></li>
+  <li><a href="Books/Fadael_AlQuran.pdf" target="_blank" > كتاب الفضائل</a></li>
+  <li><a href="Books/Dua_full.pdf" target="_blank" > دعاء الخائف</a></li>
+  <li><a href="Books/Bayan_AlFarq/Tirmidhi_Bayan_al-Farq.pdf" target="_blank"> بيان الفرق</a></li>
+</ul>
+
+</div>
+
+<div class="innerContent">
+
+<div class="topSectionBG">
+
+<script ID="clientEventHandlersJS" LANGUAGE="javascript">
+<!--
+var LinkPath = ""
+function checkBrowser()
+{
+	if (document.all) 
+		return "IE"
+	else
+		return "NN"
+}
+
+function OnMouseOver(parag) 
+{
+	Dom.getElm(parag).style.color = "yellow";	
+}
+
+function OnMouseOut(parag) 
+{
+	var paragid = parag;
+	if(get_Pageid == paragid)
+		Dom.getElm(parag).style.color = "yellow";
+	else
+		Dom.getElm(parag).style.color = "white";
+}
+
+function ChangeMenueLanguage()
+{
+	document.langForm.action = 'ConvertUILang.asp';
+	document.langForm.CurrentPage.value  = document.location.href; 
+	document.langForm.submit();
+}
+
+function send_feedBack(){
+	var url			= window.location;
+	var Bname		= navigator.appName;
+	var BVesrsion	= navigator.appVersion;
+	var plat		= navigator.platform ;
+	var sysLang		= navigator.systemLanguage;
+	var userLang	= navigator.userLanguage;
+	var cpuClass	= navigator.cpuClass;
+	
+		document.location.href = "ContactUs.asp?url=" + url + "&AppName=" + Bname + "&AppVersion=" + BVesrsion + "&Platform=" + plat + "&SysLang=" + sysLang + "&UserLang=" + userLang + "&cpuClass=" + cpuClass
+}	
+
+function Get_Hint(Item)
+{
+	if (Item.id == "BookMark" || Item.id == "Taf_BookMark" || Item.id == "Quran_BookMark")
+	{
+		Item.style.cursor = "hand";
+		Dom.getElm('Hint').style.visibility = "visible";
+		Dom.getElm('Hint').style.top = parseInt(Item.style.top) + 38;
+		Dom.getElm('Hint').style.left = parseInt(Item.style.left) + 30;   
+		Dom.getElm('Hint').innerHTML= "<font class='TextHelp'><b>حفظ عنوان الصفحة</b></font>" ; 
+	}  
+	else
+		if (Item.id == "Printer" || Item.id =="Taf_Printer" || Item.id == "Quran_Printer")
+		{
+			Item.style.cursor="hand";
+			Dom.getElm('Hint').style.visibility = "visible";
+			Dom.getElm('Hint').style.top = parseInt(Item.style.top) + 38;
+			Dom.getElm('Hint').style.left = parseInt(Item.style.left) + 30;
+			Dom.getElm('Hint').innerHTML = "<font class='TextHelp'><b>طباعة الصفحة</b></font>";
+		}
+	else
+		if (Item.id == "MailToFrieind" || Item.id == "Taf_MailToFrieind" || Item.id == "Quran_MailToFrieind")
+		{
+			Item.style.cursor="hand";
+			Dom.getElm('Hint').style.visibility="visible";
+			Dom.getElm('Hint').style.top=parseInt(Item.style.top)+38;
+			Dom.getElm('Hint').style.left=parseInt(Item.style.left)+30;
+			Dom.getElm('Hint').innerHTML="<font class='TextHelp'><b>أرسل الصفحة الى صديق</b></font>";
+		}
+		else
+		if ( Item.id == "FeedBack" || Item.id == "Taf_FeedBack" || Item.id == "Quran_FeedBack")
+		{
+			Item.style.cursor="hand";
+			Dom.getElm('Hint').style.visibility = "visible";
+			Dom.getElm('Hint').style.top = parseInt(Item.style.top) + 38;
+			Dom.getElm('Hint').style.left = parseInt(Item.style.left) + 30;
+			Dom.getElm('Hint').innerHTML = "<font class='TextHelp'><b>اقتراحات وملاحظات</b></font>";
+		}
+		else
+		if (Item.id == "Help" || Item.id == "Taf_Help" || Item.id == "Quran_Help")
+		{
+			Item.style.cursor="hand";
+			Dom.getElm('Hint').style.visibility="visible";
+			Dom.getElm('Hint').style.top=parseInt(Item.style.top)+38;
+			Dom.getElm('Hint').style.left=parseInt(Item.style.left)+45;
+			Dom.getElm('Hint').innerHTML="<font class='TextHelp'><b>مساعدة</b></font>";
+		}
+		else
+			if (Item.id == "Taf_KeyBrd")
+			{
+				Item.style.cursor="hand";
+				Dom.getElm('Hint').style.visibility="visible";
+				Dom.getElm('Hint').style.top=parseInt(Item.style.top)+38;
+				Dom.getElm('Hint').style.left=parseInt(Item.style.left)+30;
+				Dom.getElm('Hint').innerHTML="<font class='TextHelp'><b>لوحة مفاتيح افتراضية</b></font>";
+			}
+			else
+				if (Item.id == "Quran_Tajweed")
+				{
+					Item.style.cursor="hand";
+					Dom.getElm('Hint').style.visibility="visible";
+					Dom.getElm('Hint').style.top=parseInt(Item.style.top)+38;
+					Dom.getElm('Hint').style.left=parseInt(Item.style.left)+30;
+					Dom.getElm('Hint').innerHTML="<font class='TextHelp'></font>";
+				}
+				else
+					if (Item.id == "LanguageItem" || Item.id == "Taf_Language" || Item.id == "Quran_Language" )
+					{
+					
+					
+						Item.style.cursor="hand";
+						Dom.getElm('Hint').style.visibility="visible";
+						Dom.getElm('Hint').style.top = parseInt(Item.style.top) + 38;
+						Dom.getElm('Hint').style.left = parseInt(Item.style.left) + 30;
+						Dom.getElm('Hint').innerHTML="<font class='TextHelp'><b>التحويل إلى الانجليزية</b></font>";
+					}
+}
+
+function Remove_Hint()
+{
+	Dom.getElm('Hint').style.visibility ="hidden"; 
+}
+
+//RemoveTajweedMenue()
+function Remove_HintTajweed()
+{
+	Dom.getElm('Hint').style.visibility ="hidden"; 
+	RemoveTajweedMenue()
+}
+
+function BookMark_Page()
+{
+	var url,title;
+	url = window.location;  
+	title = document.title;
+	if (checkBrowser() == "IE")
+		window.external.AddFavorite(url,title)   
+	else
+		alert("Press Ctrl+D to Bookmark this page")
+}
+
+function MailToFriend_Send()
+{
+  	var url			= window.location;
+	document.formURLGlobe.urlFull.value = window.location;
+	var type		= "MailToFriend";
+	document.formURLGlobe.action = "MailToFriend.asp?Type=" + type
+	document.formURLGlobe.submit();
+}
+
+function Tajweed_onclick()
+{	
+	if ("" == "0")
+		getTajweedMenue(0)
+	else
+		getTajweedMenue(1)	
+}
+
+function PrintPage()
+{
+	try {
+		var printLayer = Dom.getElm("SearchResults").innerHTML;
+		document.PrinterForm.text1.value = printLayer; 
+		if (get_Pageid == "altafasir1")
+		{	var Ayah1 = Dom.getElm('Ayat');
+			var Sora1 = Dom.getElm('SoraName');
+			var TafsirName = Dom.getElm('Tafsir').options[Dom.getElm('Tafsir').selectedIndex].text;
+			
+				window.open("printpage.asp?status=Paging&Page=Tafasir&Ayah="+Ayah1.value+"&Sora="+ Sora1.value+ "&TafsirName=" + TafsirName, null , "top=20,left=400,height=600, width=600, status=no, toolbar=no, menubar=no, location=no, scrollbars=yes");
+		}
+			else
+			if(get_Pageid =="Qeraat1")
+				window.open("printpage.asp?status=Paging&Page=Qeraat1&SoraNo="+document.Form1.SoraName.value+"&AyahNo="+document.Form1.Ayat.value+"&RuleID="+document.Form1.Rule.value+"&QareeID="+document.Form1.Reader.value+"&RaweeID="+document.Form1.Narrator.value+"&Word="+document.Form1.rWord.value, null, "top=20,left=400,height=600, width=600, status=no, toolbar=no, menubar=no, location=no, scrollbars=yes");					
+			else
+				window.open("printpage.asp?status=none", null, "top=20,left=400,height=600, width=600, status=no, toolbar=no, menubar=no, location=no, scrollbars=yes");
+	}
+	catch(e)
+	{
+		alert("لا توجد مادة للطباعة");
+	}
+}
+//-->
+</script>
+<FORM action="" method=post id=SendUrlToContactUs name=SendUrlToContactUs>
+	<INPUT type="hidden" id=UrlTextFeedBack name=UrlTextFeedBack></input>
+	<INPUT type="hidden" id=BnameTextFeedBack name=BnameTextFeedBack></input>
+	<INPUT type="hidden" id=BVesrsionTextFeedBack name=BVesrsionTextFeedBack></input>
+	<INPUT type="hidden" id=platlTextFeedBack name=platlTextFeedBack></input>
+	<INPUT type="hidden" id=sysLangTextFeedBack name=sysLangTextFeedBack></input>
+	<INPUT type="hidden" id=userLangTextFeedBack name=userLangTextFeedBack></input>
+	<INPUT type="hidden" id=cpuClassTextFeedBack name=cpuClassTextFeedBack></input>
+
+<input name="ServerDate" id="ServerDate" value="2016" type="hidden">
+
+</FORM>
+<!-- Display layer-->
+
+<!-- Print page Form -->
+<FORM action="" method=POST id=PrinterForm name=PrinterForm>
+	<INPUT type="hidden" id=text1 name=text1>
+</FORM>
+
+<!-- Language Form -->
+<FORM action="" method=POST id=langForm name=langForm>
+	<INPUT type="Hidden" id=LanguageID name=LanguageID value="1">	
+	<INPUT type="Hidden" id=CurrentPage name=CurrentPage >	
+</FORM>
+
+
+
+
+<!-- Top title opening-->
+<div id="TopTitle" class="topSection">&nbsp;
+		<div id="ToolBar" style="HEIGHT: 29px; LEFT: 40px; OVERFLOW: hidden; POSITION: absolute; TOP: 60px; VISIBILITY: hidden; WIDTH: 216px" class='TextHelp'>
+			<div style="BACKGROUND-IMAGE: url(images/Tool_Bar_Arabic_B.gif); HEIGHT: 16px; OVERFLOW: hidden; POSITION: absolute; WIDTH: 216px" class='TextHelp'></div>
+			<!--div style="BACKGROUND-IMAGE: url(images/Tool_Bar_Arabic_B.gif); HEIGHT: 16px; OVERFLOW: hidden; POSITION: absolute; WIDTH: 216px" class='TextHelp'></div-->
+			<a href="javascript:BookMark_Page()"><div id="BookMark" style="HEIGHT: 15px; LEFT: 4px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()"  class='TextHelp'></div></a>
+			<a href="javascript:PrintPage()"><div id="Printer" style="HEIGHT: 15px; LEFT: 37px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:MailToFriend_Send()"><div id="MailToFrieind" style="HEIGHT: 15px; LEFT: 69px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:send_feedBack();javascript:document.SendUrlToContactUs.action =  'ContactUs.asp';javascript:document.SendUrlToContactUs.UrlTextFeedBack.value  = window.location;javascript:document.SendUrlToContactUs.BnameTextFeedBack.value  = navigator.appName;javascript:document.SendUrlToContactUs.BVesrsionTextFeedBack.value  = navigator.appVersion;javascript:document.SendUrlToContactUs.platlTextFeedBack.value  = navigator.platform;javascript:document.SendUrlToContactUs.sysLangTextFeedBack.value  = navigator.systemLanguage;javascript:document.SendUrlToContactUs.userLangTextFeedBack.value  = navigator.userLanguage;javascript:document.SendUrlToContactUs.cpuClassTextFeedBack.value  = navigator.cpuClass;javascript:document.SendUrlToContactUs.submit();"><div id="FeedBack" style="HEIGHT: 15px; LEFT: 102px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" OnClick="send_feedBack()" class='TextHelp'></div></a>
+			<div id="Help" style="HEIGHT: 15px; LEFT: 136px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'  onclick="window.open('IntroSrc.asp');"></div>
+			<a href="javascript:ChangeMenueLanguage()"><div id="LanguageItem" style="LEFT: 169px; WIDTH: 27px; POSITION: absolute; TOP: 0px; HEIGHT: 15px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+	</div> 
+		
+	<!-- menu with printer icon-->
+		<div id="Taf_ToolBar" style="HEIGHT: 29px; LEFT: 45px; OVERFLOW: hidden; POSITION: absolute; TOP: 60px; VISIBILITY: hidden; WIDTH: 249px" class='TextHelp'>
+			<div style="BACKGROUND-IMAGE: url(images/Tool_Bar_Arabic_A.gif); HEIGHT: 16px; OVERFLOW: hidden; POSITION: absolute; WIDTH: 249px" class='TextHelp'></div>
+			<!--div style="BACKGROUND-IMAGE: url(images/Tool_Bar_Arabic_A.gif); HEIGHT: 16px; OVERFLOW: hidden; POSITION: absolute; WIDTH: 249px" class='TextHelp'></div-->
+			<a href="javascript:BookMark_Page()"><div id="Taf_BookMark" style="HEIGHT: 15px; LEFT: 4px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:PrintPage()"><div id="Taf_Printer" style="HEIGHT: 15px; LEFT: 37px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:MailToFriend_Send()"><div id="Taf_MailToFrieind" style="HEIGHT: 15px; LEFT: 69px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:send_feedBack();javascript:document.SendUrlToContactUs.action = 'ContactUs.asp';javascript:document.SendUrlToContactUs.UrlTextFeedBack.value  = window.location;javascript:document.SendUrlToContactUs.BnameTextFeedBack.value  = navigator.appName;javascript:document.SendUrlToContactUs.BVesrsionTextFeedBack.value  = navigator.appVersion;javascript:document.SendUrlToContactUs.platlTextFeedBack.value  = navigator.platform;javascript:document.SendUrlToContactUs.sysLangTextFeedBack.value  = navigator.systemLanguage;javascript:document.SendUrlToContactUs.userLangTextFeedBack.value  = navigator.userLanguage;javascript:document.SendUrlToContactUs.cpuClassTextFeedBack.value  = navigator.cpuClass;javascript:document.SendUrlToContactUs.submit();"><div id="Taf_FeedBack" style="HEIGHT: 15px; LEFT: 102px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" Onclick="send_feedBack" class='TextHelp'></div></a>
+			<div id="Taf_Help" style="HEIGHT: 15px; LEFT: 136px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'  onclick="window.open('IntroSrc.asp');"></div>
+			<a href="javascript:vkbBtn_onclick('VKB/vkb.asp')"><div id="Taf_KeyBrd" style="HEIGHT: 15px; LEFT: 169px; POSITION: absolute; TOP: 0px; WIDTH: 27px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp' ></div></a>
+			<a href="javascript:ChangeMenueLanguage()"><div id="Taf_Language" style="LEFT: 202px; WIDTH: 27px; POSITION: absolute; TOP: 0px; HEIGHT: 15px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+	</div> 
+		
+	<!--menue for quran page-->
+		<div id="Quran_ToolBar" style="HEIGHT: 29px; LEFT: 47px; OVERFLOW: hidden; POSITION: absolute; TOP: 60px; VISIBILITY: hidden; WIDTH: 289px" class='TextHelp'>
+			<!--div style="BACKGROUND-IMAGE: url(images/Tool_Bar_Arabic_C.gif); HEIGHT: 16px; OVERFLOW: hidden; POSITION: absolute; WIDTH: 289px" class='TextHelp'></div-->
+			<a  href="javascript:BookMark_Page()"><div id="Quran_BookMark" style="HEIGHT: 16px; LEFT: 0px; POSITION: absolute; TOP: 0px; WIDTH: 32px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:PrintPage()"><div id="Quran_Printer" style="HEIGHT: 16px; LEFT: 33px; POSITION: absolute; TOP: 0px; WIDTH: 32px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:MailToFriend_Send()"><div id="Quran_MailToFrieind" style="HEIGHT: 16px; LEFT: 65px; POSITION: absolute; TOP: 0px; WIDTH: 33px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+			<a href="javascript:send_feedBack();javascript:document.SendUrlToContactUs.action = 'ContactUs.asp';javascript:document.SendUrlToContactUs.UrlTextFeedBack.value  = window.location;javascript:document.SendUrlToContactUs.BnameTextFeedBack.value  = navigator.appName;javascript:document.SendUrlToContactUs.BVesrsionTextFeedBack.value  = navigator.appVersion;javascript:document.SendUrlToContactUs.platlTextFeedBack.value  = navigator.platform;javascript:document.SendUrlToContactUs.sysLangTextFeedBack.value  = navigator.systemLanguage;javascript:document.SendUrlToContactUs.userLangTextFeedBack.value  = navigator.userLanguage;javascript:document.SendUrlToContactUs.cpuClassTextFeedBack.value  = navigator.cpuClass;javascript:document.SendUrlToContactUs.submit();"><div id="Quran_FeedBack" style="HEIGHT: 16px; LEFT: 98px; POSITION: absolute; TOP: 0px; WIDTH: 33px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" Onclick="send_feedBack" class='TextHelp'></div></a>
+			<div id="Quran_Help" style="HEIGHT: 16px; LEFT: 131px; POSITION: absolute; TOP: 0px; WIDTH: 33px" onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'  onclick="window.open('IntroSrc.asp');"></div>
+			<!--<a href="javascript:Tajweed_onclick()">--><div id="Quran_Tajweed" style="HEIGHT: 16px; LEFT: 165px;  WIDTH: 73px; POSITION: absolute; TOP: 0px; " onmouseover="javascript:Tajweed_onclick();Dom.getElm('TajweedMenu').style.display='';Dom.getElm('AyatCombo').style.visibility='hidden';" onmouseout="Dom.getElm('AyatCombo').style.visibility='visible';javascript:Dom.getElm('TajweedMenu').style.display='none';" class='TextHelp'></div><!--</a>-->
+			<!--div style="BACKGROUND-IMAGE: url(images/Tool_Bar_Arabic_C.gif); HEIGHT: 16px; OVERFLOW: hidden; POSITION: absolute; WIDTH: 289px" class='TextHelp'></div-->
+			<!--<a href="javascript:Tajweed_onclick()"><div id="Quran_Tajweed" style="HEIGHT: 16px; LEFT: 169px;  WIDTH: 57px; POSITION: absolute; TOP: 0px; " onmouseover="Get_Hint(this)" onmouseout="Remove_HintTajweed()" class='TextHelp'></div></a>-->
+			<a href="javascript:ChangeMenueLanguage()"><div id="Quran_Language" style="HEIGHT: 15px; LEFT: 238px; WIDTH: 57px; POSITION: absolute; TOP: 0px; " onmouseover="Get_Hint(this)" onmouseout="Remove_Hint()" class='TextHelp'></div></a>
+	</div> 
+		
+	<!--Layer to show hint-->
+	<div dir="rtl" style="HEIGHT: 18px; POSITION: absolute; VISIBILITY: hidden" id="Hint" class='TextArabic'></div>
+</div>
+<!-- Top title closed-->
+
+
+<FORM action="" method="POST" id="formURLGlobe" name="formURLGlobe">
+	<INPUT TYPE='hidden' id="urlFull" name="urlFull">
+</FORM>
+<!--Right Menu End -->
+		<DIV id='MarginLine' STYLE='position:absolute; top:0; width:0px;border-right: 0px inset black;'></DIV>
+		
+		
+
+</div>
+
+
+
+<!-- Start Display Layer-->
+<DIV id=disp STYLE="/*LEFT:10px; WIDTH: 650px; POSITION: absolute; TOP: 85px;*/" class="PageDisp" >
+
+
+ <embed id="NSPlay2" TYPE="application/x-mplayer2" height="0" width="0" />
+
+
+
+<!--Start Page Code-->
+ 
+<DIV align=center id=TopLayer style="HEIGHT: 85px; LEFT: 35px; POSITION: relative; WIDTH: 595px" class='TextArabic'>
+<Form name="Form1" id="Form1" method="GET">
+<!-- Sora Name Filter-->
+
+
+<DIV id=SoraNameLayer style="BACKGROUND-IMAGE: url(images/B-1.GIF); HEIGHT: 18px; LEFT: 525px; OVERFLOW: hidden; POSITION: absolute; TOP: 5px; WIDTH: 69px" class='TextArabic'></DIV>
+<DIV style="HEIGHT: 18px; LEFT: 428px; POSITION: absolute; TOP: 5px; WIDTH: 95px" id="SorahCombo" class='TextArabic'>
+<select id="SoraName" name="SoraName" dir="rtl"  class="ComboStyle" style="WIDTH: 95px;height:21px;" LANGUAGE=javascript onChange="return dSoraName_onchange(this)">
+	<option value=1>1&nbsp;&nbsp;&nbsp;الفاتحة</option><option value=2>2&nbsp;&nbsp;&nbsp;البقرة</option><option value=3>3&nbsp;&nbsp;&nbsp;آل عمران</option><option value=4>4&nbsp;&nbsp;&nbsp;النساء</option><option selected value=5>5&nbsp;&nbsp;&nbsp;المائدة</option><option value=6>6&nbsp;&nbsp;&nbsp;الأنعام</option><option value=7>7&nbsp;&nbsp;&nbsp;الأعراف</option><option value=8>8&nbsp;&nbsp;&nbsp;الأنفال</option><option value=9>9&nbsp;&nbsp;&nbsp;التوبة</option><option value=10>10&nbsp;&nbsp;&nbsp;يونس</option><option value=11>11&nbsp;&nbsp;&nbsp;هود</option><option value=12>12&nbsp;&nbsp;&nbsp;يوسف</option><option value=13>13&nbsp;&nbsp;&nbsp;الرعد</option><option value=14>14&nbsp;&nbsp;&nbsp;إبراهيم</option><option value=15>15&nbsp;&nbsp;&nbsp;الحجر</option><option value=16>16&nbsp;&nbsp;&nbsp;النحل</option><option value=17>17&nbsp;&nbsp;&nbsp;الإسراء</option><option value=18>18&nbsp;&nbsp;&nbsp;الكهف</option><option value=19>19&nbsp;&nbsp;&nbsp;مريم</option><option value=20>20&nbsp;&nbsp;&nbsp;طه</option><option value=21>21&nbsp;&nbsp;&nbsp;الأنبياء</option><option value=22>22&nbsp;&nbsp;&nbsp;الحج</option><option value=23>23&nbsp;&nbsp;&nbsp;المؤمنون</option><option value=24>24&nbsp;&nbsp;&nbsp;النور</option><option value=25>25&nbsp;&nbsp;&nbsp;الفرقان</option><option value=26>26&nbsp;&nbsp;&nbsp;الشعراء</option><option value=27>27&nbsp;&nbsp;&nbsp;النمل</option><option value=28>28&nbsp;&nbsp;&nbsp;القصص</option><option value=29>29&nbsp;&nbsp;&nbsp;العنكبوت</option><option value=30>30&nbsp;&nbsp;&nbsp;الروم</option><option value=31>31&nbsp;&nbsp;&nbsp;لقمان</option><option value=32>32&nbsp;&nbsp;&nbsp;السجدة</option><option value=33>33&nbsp;&nbsp;&nbsp;الأحزاب</option><option value=34>34&nbsp;&nbsp;&nbsp;سبأ</option><option value=35>35&nbsp;&nbsp;&nbsp;فاطر</option><option value=36>36&nbsp;&nbsp;&nbsp;يس</option><option value=37>37&nbsp;&nbsp;&nbsp;الصافات</option><option value=38>38&nbsp;&nbsp;&nbsp;ص</option><option value=39>39&nbsp;&nbsp;&nbsp;الزمر</option><option value=40>40&nbsp;&nbsp;&nbsp;غافر</option><option value=41>41&nbsp;&nbsp;&nbsp;فصلت</option><option value=42>42&nbsp;&nbsp;&nbsp;الشورى</option><option value=43>43&nbsp;&nbsp;&nbsp;الزخرف</option><option value=44>44&nbsp;&nbsp;&nbsp;الدخان</option><option value=45>45&nbsp;&nbsp;&nbsp;الجاثية</option><option value=46>46&nbsp;&nbsp;&nbsp;الأحقاف</option><option value=47>47&nbsp;&nbsp;&nbsp;محمد</option><option value=48>48&nbsp;&nbsp;&nbsp;الفتح</option><option value=49>49&nbsp;&nbsp;&nbsp;الحجرات</option><option value=50>50&nbsp;&nbsp;&nbsp;ق</option><option value=51>51&nbsp;&nbsp;&nbsp;الذاريات</option><option value=52>52&nbsp;&nbsp;&nbsp;الطور</option><option value=53>53&nbsp;&nbsp;&nbsp;النجم</option><option value=54>54&nbsp;&nbsp;&nbsp;القمر</option><option value=55>55&nbsp;&nbsp;&nbsp;الرحمن</option><option value=56>56&nbsp;&nbsp;&nbsp;الواقعة</option><option value=57>57&nbsp;&nbsp;&nbsp;الحديد</option><option value=58>58&nbsp;&nbsp;&nbsp;المجادلة</option><option value=59>59&nbsp;&nbsp;&nbsp;الحشر</option><option value=60>60&nbsp;&nbsp;&nbsp;الممتحنة</option><option value=61>61&nbsp;&nbsp;&nbsp;الصف</option><option value=62>62&nbsp;&nbsp;&nbsp;الجمعة</option><option value=63>63&nbsp;&nbsp;&nbsp;المنافقون</option><option value=64>64&nbsp;&nbsp;&nbsp;التغابن</option><option value=65>65&nbsp;&nbsp;&nbsp;الطلاق</option><option value=66>66&nbsp;&nbsp;&nbsp;التحريم</option><option value=67>67&nbsp;&nbsp;&nbsp;الملك</option><option value=68>68&nbsp;&nbsp;&nbsp;القلم</option><option value=69>69&nbsp;&nbsp;&nbsp;الحاقة</option><option value=70>70&nbsp;&nbsp;&nbsp;المعارج</option><option value=71>71&nbsp;&nbsp;&nbsp;نوح</option><option value=72>72&nbsp;&nbsp;&nbsp;الجن</option><option value=73>73&nbsp;&nbsp;&nbsp;المزمل</option><option value=74>74&nbsp;&nbsp;&nbsp;المدثر</option><option value=75>75&nbsp;&nbsp;&nbsp;القيامة</option><option value=76>76&nbsp;&nbsp;&nbsp;الإنسان </option><option value=77>77&nbsp;&nbsp;&nbsp;المرسلات</option><option value=78>78&nbsp;&nbsp;&nbsp;النبأ</option><option value=79>79&nbsp;&nbsp;&nbsp;النازعات</option><option value=80>80&nbsp;&nbsp;&nbsp;عبس</option><option value=81>81&nbsp;&nbsp;&nbsp;التكوير</option><option value=82>82&nbsp;&nbsp;&nbsp;الانفطار</option><option value=83>83&nbsp;&nbsp;&nbsp;المطففين</option><option value=84>84&nbsp;&nbsp;&nbsp;الانشقاق</option><option value=85>85&nbsp;&nbsp;&nbsp;البروج</option><option value=86>86&nbsp;&nbsp;&nbsp;الطارق</option><option value=87>87&nbsp;&nbsp;&nbsp;الأعلى</option><option value=88>88&nbsp;&nbsp;&nbsp;الغاشية</option><option value=89>89&nbsp;&nbsp;&nbsp;الفجر</option><option value=90>90&nbsp;&nbsp;&nbsp;البلد</option><option value=91>91&nbsp;&nbsp;&nbsp;الشمس</option><option value=92>92&nbsp;&nbsp;&nbsp;الليل</option><option value=93>93&nbsp;&nbsp;&nbsp;الضحى</option><option value=94>94&nbsp;&nbsp;&nbsp;الشرح</option><option value=95>95&nbsp;&nbsp;&nbsp;التين</option><option value=96>96&nbsp;&nbsp;&nbsp;العلق</option><option value=97>97&nbsp;&nbsp;&nbsp;القدر</option><option value=98>98&nbsp;&nbsp;&nbsp;البينة</option><option value=99>99&nbsp;&nbsp;&nbsp;الزلزلة</option><option value=100>100&nbsp;&nbsp;&nbsp;العاديات</option><option value=101>101&nbsp;&nbsp;&nbsp;القارعة</option><option value=102>102&nbsp;&nbsp;&nbsp;التكاثر</option><option value=103>103&nbsp;&nbsp;&nbsp;العصر</option><option value=104>104&nbsp;&nbsp;&nbsp;الهمزة</option><option value=105>105&nbsp;&nbsp;&nbsp;الفيل</option><option value=106>106&nbsp;&nbsp;&nbsp;قريش</option><option value=107>107&nbsp;&nbsp;&nbsp;الماعون</option><option value=108>108&nbsp;&nbsp;&nbsp;الكوثر</option><option value=109>109&nbsp;&nbsp;&nbsp;الكافرون</option><option value=110>110&nbsp;&nbsp;&nbsp;النصر</option><option value=111>111&nbsp;&nbsp;&nbsp;المسد</option><option value=112>112&nbsp;&nbsp;&nbsp;الاخلاص</option><option value=113>113&nbsp;&nbsp;&nbsp;الفلق</option><option value=114>114&nbsp;&nbsp;&nbsp;الناس</option>
+</select>
+</DIV>
+<!--Ayah Filter -->
+<DIV id=Ayah style="BACKGROUND-IMAGE: url(images/B-2.GIF); HEIGHT: 18px; LEFT: 525px; OVERFLOW: hidden; POSITION: absolute; TOP: 33px; WIDTH: 69px" class='TextArabic'></DIV>
+<DIV style="HEIGHT: 18px; LEFT:428px; POSITION: absolute; TOP:33px; WIDTH: 50px" id="AyatCombo" class='TextArabic'>
+<select dir="rtl" id="Ayat" name="Ayat" class="ComboStyle" style="TOP: 0px; WIDTH: 95px;height:21px" onChange="return Ayat_onchange()">
+<OPTION  value=1>1</OPTION><OPTION  value=2>2</OPTION><OPTION  value=3>3</OPTION><OPTION  value=4>4</OPTION><OPTION  value=5>5</OPTION><OPTION  value=6>6</OPTION><OPTION  value=7>7</OPTION><OPTION  value=8>8</OPTION><OPTION  value=9>9</OPTION><OPTION  value=10>10</OPTION><OPTION  value=11>11</OPTION><OPTION  value=12>12</OPTION><OPTION  value=13>13</OPTION><OPTION  value=14>14</OPTION><OPTION  value=15>15</OPTION><OPTION  value=16>16</OPTION><OPTION  value=17>17</OPTION><OPTION  value=18>18</OPTION><OPTION  value=19>19</OPTION><OPTION  value=20>20</OPTION><OPTION  value=21>21</OPTION><OPTION  value=22>22</OPTION><OPTION  value=23>23</OPTION><OPTION  value=24>24</OPTION><OPTION  value=25>25</OPTION><OPTION  value=26>26</OPTION><OPTION  value=27>27</OPTION><OPTION  value=28>28</OPTION><OPTION  value=29>29</OPTION><OPTION  value=30>30</OPTION><OPTION  value=31>31</OPTION><OPTION  value=32>32</OPTION><OPTION  value=33>33</OPTION><OPTION  value=34>34</OPTION><OPTION  value=35>35</OPTION><OPTION  value=36>36</OPTION><OPTION  value=37>37</OPTION><OPTION  value=38>38</OPTION><OPTION  value=39>39</OPTION><OPTION  value=40>40</OPTION><OPTION  value=41>41</OPTION><OPTION  value=42>42</OPTION><OPTION  value=43>43</OPTION><OPTION  value=44>44</OPTION><OPTION  value=45>45</OPTION><OPTION  value=46>46</OPTION><OPTION  value=47>47</OPTION><OPTION  value=48>48</OPTION><OPTION  value=49>49</OPTION><OPTION  value=50>50</OPTION><OPTION  value=51>51</OPTION><OPTION  value=52>52</OPTION><OPTION  value=53>53</OPTION><OPTION  value=54>54</OPTION><OPTION  value=55>55</OPTION><OPTION  value=56>56</OPTION><OPTION  value=57>57</OPTION><OPTION  value=58>58</OPTION><OPTION  value=59>59</OPTION><OPTION  value=60>60</OPTION><OPTION  value=61>61</OPTION><OPTION  value=62>62</OPTION><OPTION  value=63>63</OPTION><OPTION  value=64>64</OPTION><OPTION  value=65>65</OPTION><OPTION  value=66>66</OPTION><OPTION  value=67>67</OPTION><OPTION  value=68>68</OPTION><OPTION  value=69>69</OPTION><OPTION  value=70>70</OPTION><OPTION  value=71>71</OPTION><OPTION  value=72>72</OPTION><OPTION  value=73>73</OPTION><OPTION  value=74>74</OPTION><OPTION  value=75>75</OPTION><OPTION  value=76>76</OPTION><OPTION  value=77>77</OPTION><OPTION  value=78>78</OPTION><OPTION  value=79>79</OPTION><OPTION  value=80>80</OPTION><OPTION  value=81>81</OPTION><OPTION  value=82>82</OPTION><OPTION  value=83>83</OPTION><OPTION  value=84>84</OPTION><OPTION  value=85>85</OPTION><OPTION  value=86>86</OPTION><OPTION  value=87>87</OPTION><OPTION  value=88>88</OPTION><OPTION  value=89>89</OPTION><OPTION  value=90>90</OPTION><OPTION  value=91>91</OPTION><OPTION  value=92>92</OPTION><OPTION  value=93>93</OPTION><OPTION  value=94>94</OPTION><OPTION  value=95>95</OPTION><OPTION  value=96>96</OPTION><OPTION  value=97>97</OPTION><OPTION  value=98>98</OPTION><OPTION  value=99>99</OPTION><OPTION  value=100>100</OPTION><OPTION  value=101>101</OPTION><OPTION  value=102>102</OPTION><OPTION  value=103>103</OPTION><OPTION  value=104>104</OPTION><OPTION selected value=105>105</OPTION><OPTION  value=106>106</OPTION><OPTION  value=107>107</OPTION><OPTION  value=108>108</OPTION><OPTION  value=109>109</OPTION><OPTION  value=110>110</OPTION><OPTION  value=111>111</OPTION><OPTION  value=112>112</OPTION><OPTION  value=113>113</OPTION><OPTION  value=114>114</OPTION><OPTION  value=115>115</OPTION><OPTION  value=116>116</OPTION><OPTION  value=117>117</OPTION><OPTION  value=118>118</OPTION><OPTION  value=119>119</OPTION><OPTION  value=120>120</OPTION>
+</select></DIV>
+<INPUT id=AyatTotal name=AyatTotal type="hidden" value=120> 
+<!-- Madaheb Filter -->
+<DIV id=Madaheb style="BACKGROUND-IMAGE: url(images/B-3.GIF); HEIGHT: 18px; LEFT: 355px; OVERFLOW: hidden; POSITION: absolute; TOP: 5px; WIDTH: 69px" class='TextArabic'></DIV>
+<DIV dir=rtl style="HEIGHT: 18px; LEFT:72px; POSITION: absolute; TOP:2px; WIDTH: 280px" id="MadahebCombo" class='TextArabic'>
+<select  id="Madhab" name="Madhab" class="ComboStyle" style="TOP: 5px; WIDTH: 100%;HEIGHT: 21px;"  LANGUAGE=javascript onChange="return Madhab_onchange(this)">
+<option  value=0>غير محدد</option><option selected value=1>أمهات التفاسير</option><option  value=2> تفاسير أهل السنة </option><option  value=3>تفاسير أهل السنة الصوفية</option><option  value=10>تفاسير أهل السنة السلفية</option><option  value=9>تفاسير ميسرة</option><option  value=4>تفاسير الشيعة الإثنى عشرية</option><option  value=5>تفاسيرالزيدية</option><option  value=6>تفاسيرالاباضية</option><option  value=7>تفاسير حديثة</option><option  value=8>تفاسير مختصرة</option>
+</select>
+</DIV>
+
+<!-- Tafsir Filter -->
+<DIV id=Tafasir style="BACKGROUND-IMAGE: url(images/B-4.GIF); HEIGHT: 18px; LEFT: 355px; OVERFLOW: hidden; POSITION: absolute; TOP: 33px; WIDTH: 69px" class='TextArabic'></DIV>
+<DIV style="HEIGHT: 18px; LEFT:72px; POSITION: absolute; TOP:33px; WIDTH:280px" id="TafsirCombo" class='TextArabic'>
+<select dir="rtl" id="Tafsir" name="Tafsir" class="ComboStyle" style="TOP: 5px; WIDTH: 100%;HEIGHT: 21px;" onChange="return Tafsir_onchange()">
+<option  selected value=1>جامع البيان في تفسير القرآن/ الطبري (ت 310 هـ)</option><option  value=2>الكشاف/ الزمخشري (ت 538 هـ)</option><option  value=4>مفاتيح الغيب ، التفسير الكبير/ الرازي (ت 606 هـ)</option><option  value=5>الجامع لاحكام القرآن/ القرطبي (ت 671 هـ)</option><option  value=7>تفسير القرآن الكريم/ ابن كثير (ت 774 هـ)</option><option  value=6>انوار التنزيل واسرار التأويل/ البيضاوي (ت 685 هـ)</option><option  value=8>تفسير الجلالين/ المحلي و السيوطي (ت المحلي 864 هـ)</option><option  value=9>فتح القدير/ الشوكاني (ت 1250 هـ)</option>
+</select>
+</DIV>
+
+<a href="javascript:Display_onclick()"><DIV id=Display style="BACKGROUND-IMAGE: url(images/B-5.GIF); HEIGHT: 18px; LEFT: 0px; OVERFLOW: hidden; POSITION: absolute; TOP: 5px; WIDTH: 69px" onMouseOver="return Display_onmouseover()" class='TextArabic'></DIV></a>
+
+<div id=ImageArrows style="BACKGROUND-IMAGE: url(images/B-6.GIF);HEIGHT: 18px;OVERFLOW:hidden; LEFT: 0px; POSITION: absolute; TOP: 33px; WIDTH: 69px" class='TextArabic'>
+<table WIDTH="69" height="18" border="0"  BORDER="0" CELLSPACING="0" CELLPADDING="0" class='TextArabic'>
+	<tr VAlign="TOP" class='TextArabic'>
+		<td class='TextArabic' align="center" id=next WIDTH="30"><a href="javascript:NextAyah()">
+		&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+		<td class='TextArabic' align="center" WIDTH="46"><b></b></td>
+		<td class='TextArabic' align="center" id=prev WIDTH="30"><a href="javascript:PrevAyah()">
+		&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+	</tr>
+</table>
+</div>
+
+
+<INPUT type="hidden" id="SoraAyatTotal" name="SoraAyatTotal" value="120">
+<INPUT TYPE='hidden' ID='TotalAyahNo5' NAME='TotalAyahNo5' VALUE='176'>
+</Form>
+
+<!--| TafsirHiddenForm; MadhabName |-->
+<FORM id="HiddenForm" name="HiddenForm"  action="Tafasir.asp" method="GET">
+	<INPUT TYPE=HIDDEN id="tMadhNo" name="tMadhNo">
+	<INPUT TYPE=HIDDEN id="tTafsirNo" name="tTafsirNo">
+	<INPUT TYPE=HIDDEN id="tSoraNo" name="tSoraNo"> 
+	<INPUT TYPE=HIDDEN id="tAyahNo" name="tAyahNo">
+	<INPUT TYPE=HIDDEN id="tDisplay" name="tDisplay">
+	<INPUT TYPE=HIDDEN id="UserProfile" name="UserProfile" value=0>
+</FORM>
+
+<DIV STYLE="border:0px solid blue; position:absolute; width:594px; height:5px; Top:50px; Left:0px">
+	<hr width=100% color=#8b0000 >
+</DIV>
+</DIV>
+<DIV dir='RTL' Language=JavaScript onmouseout='return menu_OnMouseOut()' style='OVERFLOW: no;  LEFT: 0px;   POSITION: relative; WIDTH: 630px ;' id=DispFrame class='TextArabic'><div align=right class='TextArabic' style='border:0px solid red;width:588px;' dir='rtl'><Font class='TextResultArabic'>* تفسير جامع البيان في تفسير القرآن/ الطبري (ت 310 هـ)</Font><font color=#0b196b> مصنف </font><Font class='TextResultArabic'><font color=#0b196b>و مدقق </font></Font><br><hr align=right width='100%'></div><div id=SearchResults name=SearchResults align=right class='TextArabic' style='OVERFLOW:none;border:1px solid white;width:590px;' dir='rtl'><DIV align=right dir=rtl id=AyahMenu Language=JavaScript onmouseover='return menu_OnMouseOver()' onmouseout='return menu_OnMouseOut()' style='Border:2px darkred groove; BACKGROUND-COLOR: white; DISPLAY: none; padding: 5px; LEFT: 330px; POSITION: absolute; WIDTH: 170px' class='TextArabic'><TABLE border=0 cellPadding=0 cellSpacing=0 style='HEIGHT: 100%; width:100%' class='TextArabic'><TR class='TextArabic'><TD align=right class='TextArabic'><A href='javascript:ReadAyah_onclick()'><FONT  id=ReadAyah OnMouseOver='return menuit1_onmouseover()'>قراءة الآية</FONT></a></TD></TR><TR class='TextArabic'><TD align=right class='TextArabic'><A href='javascript:Open_QurPage(5, 105)'><FONT id=OpenQurPage  OnMouseOver='return menuit2_onmouseover()'>فتح صفحة القرآن</FONT></a></TD></TR><TR class='TextArabic'><TD align=right class='TextArabic'><A href='javascript:go_QurPage(5,105)'><FONT id=getQurPage OnMouseOver='return menuit3_onmouseover()'>الانتقال الى صفحة القرآن</FONT></a></TD></TR></TABLE></DIV><Font id=AyahText class='TextAyah'><b>{</b> <A class='TextAyah' style='TEXT-DECORATION: none' href=JavaScript:Open_Menu()>ي&#1648;أَيُّهَا &#1649;لَّذِينَ آمَنُواْ عَلَيْكُمْ أَنْفُسَكُمْ لاَ يَضُرُّكُمْ مَّن ضَلَّ إِذَا &#1649;هْتَدَيْتُمْ إِلَى &#1649;للَّهِ مَرْجِعُكُمْ جَمِيعاً فَيُنَبِّئُكُمْ بِمَا كُنْتُمْ تَعْمَلُونَ</A> <b>}</b></Font><BR><BR><div align='right' dir='rtl'><font class='TextResultArabic'><font color='black'>يقول تعالـى ذكره: &#123; يا أيُّها الَّذِينَ آمَنُوا عَلَـيْكُمْ أنْفُسَكُمْ &#125; فأصلـحوها&#1548; واعملوا فـي خلاصها من عقاب الله تعالـى&#1548; وانظروا لها فـيـما يقرّبها من ربها&#1548; فإنه &#123; لاَ يَضُرُّكُمْ مَنْ ضَلَّ &#125; يقول: لا يضرّكم من كفر وسلك غير سبـيـل الـحقّ إذا أنتـم اهتديتـم وآمنتـم بربكم وأطعتـموه فـيـما أمركم به وفـيـما نهاكم عنه&#1548; فحرّمتـم حرامه وحللتـم حلاله. ونصب قوله: &#123; أنْفُسَكُمْ &#125; بـالإغراء&#1548; والعرب تغري من الصفـات ب &#171;علـيك&#187;&#1548; و&#171;عندك&#187; و&#171;دونك&#187; و&#171;إلـيك&#187;.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>واختلف أهل التأويـل فـي تأويـل ذلك&#1548; فقال بعضهم: معناه: يا أيها الذين آمنوا علـيكم أنفسكم إذا أمرتـم بـالـمعروف ونهيتـم عن الـمنكر فلـم يُقبل منكم ذلك. ذكر من قال ذلك:</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا سوّار بن عبد الله&#1548; قال: ثنا أبـي&#1548; قال: ثنا أبو الأشهب&#1548; عن الـحسن: أن هذه الآية قرئت علـى ابن مسعود: &#123; يا أيُّها الَّذِينَ آمَنُوا عَلَـيْكُمْ أنْفُسَكُمْ لاَ يَضُرُّكُمْ مَنْ ضَلَّ إذَا اهْتَدَيْتُـمْ &#125; فقال ابن مسعود: لـيس هذا بزمانها&#1548; قولوها ما قبلت منكم فإذا ردّت علـيكم فعلـيكم أنفسكم.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا ابن وكيع&#1548; قال: ثنا أبو أسامة&#1548; عن أبـي الأشهب&#1548; عن الـحسن&#1548; قال: ذكر عن ابن مسعود &#123; يا أيُّها الَّذِينَ آمَنُوا &#125; ثم ذكر نـحوه.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا يعقوب&#1548; قال: ثنا ابن علـية&#1548; عن يونس&#1548; عن الـحسن&#1548; قال: قال رجل لابن مسعود: ألـم يقل الله: &#123; يا أيُّها الَّذِينَ آمَنُوا عَلَـيْكُمْ أنْفُسَكُمْ لاَ يَضُرُّكُمْ مَنْ ضَلَّ إذَا اهْتَدَيْتُـمْ &#125;؟ قال: لـيس هذا بزمانها&#1548; قولوها ما قُبلت منكم فإذا ردّت علـيكم فعلـيكم أنفسكم.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا الـحسن بن عرفة&#1548; قال: ثنا شبـابة بن سوّار&#1548; قال: ثنا الربـيع بن صبـيح&#1548; عن سفـيان بن عقال&#1548; قال: قـيـل لابن عمر: لو جلستَ فـي هذه الأيام فلـم تأمر ولـم تنه&#1548; فإن الله تعالـى يقول: &#123; عَلَـيْكُمْ أنْفُسَكُمْ لاَ يَضُرُّكُمْ مَنْ ضَلَّ إذَا اهْتَدَيْتُـمْ &#125; فقال ابن عمر: إنها لـيست لـي ولا لأصحابـي&#1548; لأن رسول الله صلى الله عليه وسلم قال:</font></font><b><font class='TextResultArabic'><font color='Red'> " ألا فلـيبلغ الشاهد الغائب " </font></font></b><font class='TextResultArabic'><font color='black'>فكنا نـحن الشهود وأنتـم الغَيَب&#1548; ولكن هذه الآية لأقوام يجيئون من بعدنا إن قالوا لـم يقبل منهم.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا أحمد بن الـمقدام&#1548; قال: ثنا الـمعتـمر بن سلـيـمان&#1548; قال: سمعت أبـي&#1548; قال: ثنا قتادة&#1548; عن أبـي مازن قال: انطلقت علـى عهد عثمان إلـى الـمدينة&#1548; فإذا قوم من الـمسلـمين جلوس&#1548; فقرأ أحدهم هذه الآية: &#123; عَلَـيْكُمْ أنْفُسَكُمْ &#125; فقال أكثرهم: لـم يجيءْ تأويـل هذه الآية الـيوم.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا مـحمد بن بشار&#1548; قال: ثنا عمرو بن عاصم&#1548; قال: ثنا الـمعتـمر&#1548; عن أبـيه&#1548; عن قتادة&#1548; عن أبـي مازن&#1548; بنـحوه.</font></font><font class='TextResultArabic'><font color='black'><BR></BR></font></font><font class='TextResultArabic'><font color='black'>حدثنا مـحمد بن بشار&#1548; قال: ثنا مـحمد بن جعفر وأبو عاصم&#1548; قالا: ثنا عوف&#1548; عن سوّار بن شبـيب&#1548; قال: كنت عند ابن عمر&#1548; إذ أتاه رجل جلـيدٌ فـي العين&#1548; شديد اللسان&#1548; فقال: يا أبـا عبد الرحمن نـحن ستة كلهم قد قرءوا القرآن فأسرع فـيه&#1548; وكلهم مـجتهد لا يألو&#1548; وكلهم بغيض إلـيه أن يأتـي دناءة&#1548; وهم فـي ذلك يشهد بعضهم علـى بعض بـالشرك.</font></font>
+			<LABEL  disabled=true class=############></LABEL>
+			<center><BR><Table dir=rtl><tr><td><IMG SRC='images/Tafasir/TafasirPaging/PreviousAR.GIF' ALIGN=Middle border='0' style='BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none'></td><td></td><td></td><td></td><td><A HREF=Javascript:InnerLink_onchange(1,2,1)><IMG SRC='images/Tafasir/TafasirPaging/NextAR.GIF' ALIGN=Middle border='0' style='BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none'></A></td></tr></Table><table dir=RTL><tr >
+									<td><A DIR=LTR id="prevClass" ></A><td class='TextResultArabic'><Font Class=Msg>1&nbsp;</Font></td><td><A HREF=Javascript:InnerLink_onchange(1,2,1)><u>2</u>&nbsp;</A></td><td><A HREF=Javascript:InnerLink_onchange(1,3,1)><u>3</u>&nbsp;</A></td><td><A HREF=Javascript:InnerLink_onchange(1,4,1)><u>4</u>&nbsp;</A></td><td><A HREF=Javascript:InnerLink_onchange(1,5,1)><u>5</u>&nbsp;</A></td><td><A HREF=Javascript:InnerLink_onchange(1,6,1)><u>6</u>&nbsp;</A></td><td><A HREF=Javascript:InnerLink_onchange(1,7,1)><u>7</u>&nbsp;</A></td>
+									<td><A id="NextClass" ></A></tr></table></center></div></div></DIV>
+<SCRIPT  LANGUAGE=javascript>
+//Changing the Sura Name Combo Box and sending the related values  
+function SoraName_onchange(x)
+{
+	var h;
+	var h1 ="selected";
+	
+	h = "<select id=\'Ayat\' name=\'Ayat\' class=\'ComboStyle\' style=\'TOP:0px; WIDTH:95px;height:21px\' dir=\'rtl\'>" 
+	
+	
+	var i;
+	for (i=1; i<=ArraySoraAyah[x.value]; i++)
+	{
+		if (i == "105")
+			h += "<option value =" + "\"" + i + "\" " + h1 +" >" + i + "</option>"
+		else
+			h += " <option value =" + "\"" + i + "\"" + ">" + i + "</option>"
+	}
+	h += "</select>"
+	Dom.getElm('AyatCombo').innerHTML = h;
+	if (Dom.getElm('DispFrame') != undefined) {
+		Dom.getElm('DispFrame').style.display = "none";
+	}
+	if (Dom.getElm('UserMessage') != undefined) {
+		Dom.getElm('UserMessage').style.display = "none";
+	}
+	
+	/*
+	var Sora = Dom.getElm('SoraName').value;
+	var Ayah =  Dom.getElm('Ayat').value;
+	var MadhabNameSub =  Dom.getElm('Madhab').value;
+	var TafsirNameSub =  Dom.getElm('Tafsir').value; 
+	
+	document.HiddenForm.tSoraNo.value = Sora;
+	document.HiddenForm.tAyahNo.value = 1; 
+	document.HiddenForm.tMadhNo.value = MadhabNameSub;
+	document.HiddenForm.tTafsirNo.value = TafsirNameSub;
+	document.HiddenForm.tDisplay.value = "no";
+	document.HiddenForm.UserProfile.value = 0;
+	//document.HiddenForm.submit();
+		document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub +"&tTafsirNo="+ TafsirNameSub +"&tSoraNo="+ Sora +"&tAyahNo=1&tDisplay=no&UserProfile=0"
+	*/
+}
+//Changing the Aya Number Combo Box and sending the related values 
+function fbAyat_onchange() 
+{
+	if (Dom.getElm('DispFrame') != undefined) {
+		Dom.getElm('DispFrame').style.display = "none";
+	}
+	if (Dom.getElm('UserMessage') != undefined) {
+		Dom.getElm('UserMessage').style.display = "none";
+	}
+	
+	/*
+	var Sora = Dom.getElm('SoraName').value;
+	var Ayah =  Dom.getElm('Ayat').value;
+	var MadhabNameSub =  Dom.getElm('Madhab').value;
+	var TafsirNameSub =  Dom.getElm('Tafsir').value; 
+	
+	if(MadhabNameSub.value != 0 && TafsirNameSub.value != 0)
+	{
+		document.HiddenForm.tSoraNo.value = Sora;
+		document.HiddenForm.tAyahNo.value = Ayah;
+		document.HiddenForm.tMadhNo.value = MadhabNameSub;
+		document.HiddenForm.tTafsirNo.value = TafsirNameSub;
+		document.HiddenForm.tDisplay.value = "no";
+		document.HiddenForm.UserProfile.value = 0;
+		//document.HiddenForm.submit();
+			document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub +"&tTafsirNo="+ TafsirNameSub +"&tSoraNo="+ Sora +"&tAyahNo="+ Ayah +"&tDisplay=no&UserProfile=0"
+	}
+	*/
+}
+//To send the page number,size and related information
+function fbInnerLink_onchange(Tafsir,Count,PageSize) 
+{
+	var Sora = Dom.getElm('SoraName');
+	var Ayah =  Dom.getElm('Ayat');
+	var MadhabNameSub =  Dom.getElm('Madhab');
+	var TafsirNameSub =  Dom.getElm('Tafsir');
+	
+	var LangID = document.getElementById("LangID").value;
+			
+	document.HiddenForm.tSoraNo.value = Sora.value;
+	document.HiddenForm.tAyahNo.value = Ayah.value;
+	document.HiddenForm.tMadhNo.value = MadhabNameSub.value;
+	document.HiddenForm.tTafsirNo.value = Tafsir;
+	document.HiddenForm.tDisplay.value = "yes";
+	//document.HiddenForm.action=document.HiddenForm.action+'?Page='+Count+'&Size='+PageSize      
+	//document.HiddenForm.submit();
+		document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub.value +"&tTafsirNo="+ Tafsir +"&tSoraNo="+ Sora.value +"&tAyahNo="+ Ayah.value +"&tDisplay=yes&Page="+ Count +"&Size="+ PageSize + "&LanguageId=" + LangID
+}
+//Changing the Madhab Name Combo Box and sending the related values 
+function fbMadhab_onchange(y) 
+{	
+	var h;
+	var h1 ="selected";
+	
+	h = "<select id=\'Tafsir\' name=\'Tafsir\' class=\'ComboStyle\' style=\'TOP: 5px; WIDTH: 100%;HEIGHT: 21px;\' dir=\'rtl\'>" 
+	
+	
+	var i;
+	for (i=0; i<=ArrayMadhabId.length-1; i++)
+	{
+		if ((y.value == 0) || (ArrayMadhabId[i] == y.value)) {
+			if ((ArrayTafsirName[i] == undefined) || (ArrayLang[i] != 1)) {
+			} else {
+				if (ArrayTafsirId[i] == "1") {
+					h += "<option"
+					if (ArrayTableName[i] == "")
+						h += " style=\'color:#808080\'"
+					h += " value =" + "\"" + ArrayTafsirId[i] + "\" " + h1 +" >" + ArrayTafsirName[i] + ArrayDateOfDeath[i]+"</option>"
+				} else {
+					h += "<option"
+					if (ArrayTableName[i] == "")
+						h += " style=\'color:#808080\'"
+					h += " value =" + "\"" + ArrayTafsirId[i] + "\"" + ">" + ArrayTafsirName[i] + ArrayDateOfDeath[i]+"</option>"
+				}
+			}
+		}
+	}
+	h += "</select>"
+	Dom.getElm('TafsirCombo').innerHTML = h;
+	if (Dom.getElm('DispFrame') != undefined) {
+		Dom.getElm('DispFrame').style.display = "none";
+	}
+	if (Dom.getElm('UserMessage') != undefined) {
+		Dom.getElm('UserMessage').style.display = "none";
+	}
+	
+	/*
+	var Sora = Dom.getElm('SoraName').value;
+	var Ayah =  Dom.getElm('Ayat').value;
+	var MadhabNameSub =  Dom.getElm('Madhab').value;
+	var TafsirNameSub =  Dom.getElm('Tafsir').value; 
+	
+	document.HiddenForm.tSoraNo.value = Sora;
+	document.HiddenForm.tAyahNo.value = Ayah;
+	document.HiddenForm.tMadhNo.value = MadhabNameSub;
+	document.HiddenForm.tTafsirNo.value = TafsirNameSub;
+	document.HiddenForm.tDisplay.value = "no";
+	document.HiddenForm.UserProfile.value = 0;
+	//document.HiddenForm.submit();
+		document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub +"&tTafsirNo="+ TafsirNameSub +"&tSoraNo="+ Sora +"&tAyahNo="+ Ayah +"&tDisplay=no&UserProfile=0"
+	*/
+}
+//Changing the Tafsir Combo Box and sending the related values
+function fbTafsir_onchange() 
+{	
+	//if (Dom.getElm('DispFrame') != undefined) {
+	//	Dom.getElm('DispFrame').style.display = "none";
+	//}
+	//if (Dom.getElm('UserMessage') != undefined) {
+	//	Dom.getElm('UserMessage').style.display = "none";
+	//}
+	
+	/*
+	var Sora = Dom.getElm('SoraName').value;
+	var Ayah =  Dom.getElm('Ayat').value;
+	var MadhabNameSub =  Dom.getElm('Madhab').value;
+	var TafsirNameSub =  Dom.getElm('Tafsir').value; 
+	
+	document.HiddenForm.tSoraNo.value = Sora;
+	document.HiddenForm.tAyahNo.value = Ayah;
+	document.HiddenForm.tMadhNo.value = MadhabNameSub;
+	document.HiddenForm.tTafsirNo.value = TafsirNameSub;
+	document.HiddenForm.tDisplay.value = "no";
+	document.HiddenForm.UserProfile.value = 0;
+	//document.HiddenForm.submit();
+		document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub +"&tTafsirNo="+ TafsirNameSub +"&tSoraNo="+ Sora +"&tAyahNo="+ Ayah +"&tDisplay=no&UserProfile=0"
+	*/
+}
+
+//Read Aya
+var From_Pos ;
+var To_Pos ;
+From_Pos =3177.2675725;To_Pos   =3200.8390868
+
+var SoundFile 			= "/alhuzaifi/s5.asx"
+var MoQreeNameGlobal	= "";
+var StartPosition		= "0";
+var EndPosition			= "0";
+var ReadingStatus		= "";
+var FlagStop			= false;
+var secs
+
+function fbReadAyah_onclick() {
+	FlagStop=false;
+	var NSCom = Dom.getElm("NSPlay2");
+	var Sora = document.Form1.SoraName.value;
+	var Ayah = document.Form1.Ayat.value;
+	var AyahNo = document.Form1.Ayat.value;
+	ReadingStatus = "Ayah";
+	StartPosition = From_Pos;
+	EndPosition= To_Pos;
+	window.status = "Connecting www.altafsir.com ...";
+	MoQreeNameGlobal = "الحذيفي";
+//	alert(SoundFile);
+//  alert(window.status);
+   
+
+    NSCom.URL =  SoundFile
+  //  alert(NSCom.URL);
+
+}
+//***********************************************
+function roundit(Num, Places) {
+	if (Places > 0) {
+		if ((Num.toString().length - Num.toString().lastIndexOf('.')) > (Places + 1)) {
+			var Rounder = Math.pow(10, Places);
+			return Math.round(Num * Rounder) / Rounder;
+		}
+		else return Num;
+	}
+	else return Math.round(Num);
+}
+//***********************************************
+//To Show that the connection is done
+function getPosition() {
+	var NSCom = Dom.getElm("NSPlay2")
+		if ((roundit(NSCom.controls.CurrentPosition, 3) >= roundit(StartPosition, 3)) && (roundit(NSCom.controls.CurrentPosition, 3) <= roundit(EndPosition, 3))) {
+		NSCom.settings.volume = 70;
+		if (!FlagStop) {
+			var Geraa,Maqam
+			Geraa="قراءة حفص عن عاصم"
+			window.status = "Playing " + Geraa + " ... (" + MoQreeNameGlobal + ") ... " + "المائدة"
+			window.setTimeout("getPosition()", 10);
+		} else {
+			NSCom.controls.pause();
+			window.status = "Done ...";
+			return false;
+		}
+	} else if (roundit(NSCom.controls.CurrentPosition, 3) > roundit(EndPosition, 3)) {
+			FlagStop=true;
+			NSCom.controls.pause();
+			window.status = "Done ...";
+			return false;
+	} else {
+		NSCom.settings.volume = 0;
+		NSCom.controls.CurrentPosition = roundit(StartPosition, 3);
+		window.status = "Buffering ...";
+		window.setTimeout("getPosition()", 1000);
+	}
+}
+</SCRIPT>
+
+<!-- Script to hold the buffering-->
+<SCRIPT LANGUAGE=javascript FOR=NSPlay2 EVENT=Buffering>
+	window.status = "Buffering ...";
+</SCRIPT>
+<!-- Script to end buffering-->
+<SCRIPT LANGUAGE=javascript FOR=NSPlay2 EVENT=EndOfStream>
+	window.status = "Done ...";
+</SCRIPT>
+<!-- New Buffering-->
+<SCRIPT LANGUAGE=javascript FOR=NSPlay2 EVENT=NewStream>
+	window.status = "Connecting www.altafsir.com ...";
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR=NSPlay2 EVENT=StatusChange>
+	if (Dom.getElm("NSPlay2").playState == 3) {
+		getPosition()
+	}
+</SCRIPT>
+
+<Script language="javascript">
+//Sending display parameter function
+function fbDisplay_onclick()
+{
+	var Sora = Dom.getElm('SoraName')
+	var Ayah = Dom.getElm('Ayat')
+	var MadhabNameSub = Dom.getElm('Madhab') 
+	var TafsirNameSub = Dom.getElm('Tafsir') 
+			var LangID = document.getElementById("LangID").value;
+	
+	if ((MadhabNameSub.value == 0 && TafsirNameSub.value == 0) || (TafsirNameSub.value == ""))
+	{
+		
+		alert("الرجاء اختيار تفسير لكي يتم عرضه حسب خياراتك من السورة و الآية");
+		
+		Dom.getElm("Tafsir").focus();
+	}
+	else
+	{
+		document.HiddenForm.tSoraNo.value = Sora.value;
+		document.HiddenForm.tAyahNo.value = Ayah.value;
+		document.HiddenForm.tMadhNo.value = MadhabNameSub.value;
+		document.HiddenForm.tTafsirNo.value = TafsirNameSub.value;
+		document.HiddenForm.tDisplay.value = "yes";
+		document.HiddenForm.UserProfile.value = 0;
+		//document.HiddenForm.submit();
+			document.location.href = "Tafasir.asp?tMadhNo="+ MadhabNameSub.value +"&tTafsirNo="+ TafsirNameSub.value +"&tSoraNo="+ Sora.value +"&tAyahNo="+ Ayah.value +"&tDisplay=yes&UserProfile=0&LanguageId=" + LangID
+	}
+}
+</SCRIPT>
+<Script language="javascript">
+	var get_Pageid = "altafasir1";
+		Dom.getElm('altafasir1').style.color = "yellow";
+</SCRIPT> 
+<Script language="javascript">
+	var TopImage = new Image();
+	var h_Links;
+	
+	
+			TopImage = "url(images/HeadersOfPages/Top_Tafasir.gif)";
+	
+	
+	Dom.getElm('TopTitle').style.backgroundImage = TopImage;
+	Dom.getElm('ToolBar').style.visibility = "visible";
+	Dom.getElm('Taf_ToolBar').style.visibility = "hidden";
+	Dom.getElm('altafasir1').style.color = "yellow";
+	Dom.getElm('Arabic').style.height="100";
+</SCRIPT>
+
+
+</div>
+</div>
+<div class="clear"></div>
+
+<Script Language='JavaScript' src='GeneralFooter.js'></Script>
+<Script language="javascript">
+	//Check Browser & Footer
+	if(checkBrowser() == "IE")
+		setFooterTop = -20;
+	else
+		setFooterTop = -40;
+
+	SetAllHeights();
+	//Dom.getElm('FooterLayer').style.left = 330;
+	if (1 == "2") {
+		
+		//Dom.getElm('FooterLayer').style.left = 450;
+		
+	}
+	else
+		//Dom.getElm('FooterLayer').style.left = 330;
+</SCRIPT>
+
+
+<script language="javascript" src="R_clickh.js"></script>
+
+</div>
+
+</BODY>
+</HTMl>
